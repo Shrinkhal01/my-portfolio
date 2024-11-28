@@ -1,0 +1,102 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #4299e1;  /* Set text color to blue */
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #f7fafc; /* Light gray */
+    color: #2d3748;            /* Dark text */
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1a202c; /* Dark background for the whole page */
+    color: #e2e8f0;            /* Light text (light gray for readability) */
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: #4299e1;  /* Keep text blue for all headings */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.project {
+    background-color: #edf2f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Toggle Button */
+.mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.mode-toggle:hover {
+    background-color: #3182ce;
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+}

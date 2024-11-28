@@ -1,120 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shrinkhal's Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
-    </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body 
-    class="dark:bg-gray-900 dark:text-gray-100 
-           bg-gray-200 text-gray-800 
-           transition-colors duration-300 
-           min-h-screen">
-
-    <div class="container mx-auto px-4 py-8 max-w-4xl relative">
-        <!-- Toggle Mode Button -->
-        <button 
-            onclick="toggleMode()" 
-            class="mode-toggle flex items-center justify-center w-12 h-12 bg-blue-500 dark:bg-yellow-400 rounded-full fixed top-6 right-6 shadow-lg transition-all duration-300">
-            <span id="mode-icon" class="text-white dark:text-gray-900">☀️</span>
+<body class="dark-mode">
+    <div class="container">
+        <button onclick="toggleMode()" class="mode-toggle">
+            <span>🌙</span>
         </button>
 
-        <!-- Header Section -->
-        <header class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-blue-500 dark:text-yellow-400 mb-4">Shrinkhal</h1>
-            <p class="text-lg text-gray-600 dark:text-gray-400">B.Tech Computer Science and Engineering Student</p>
-        </header>
+        <div class="resume-box">
+            <!-- Header Section -->
+            <header class="header">
+                <h1>S H R I N K H A L</h1>
+                <p>B.Tech Computer Science and Engineering Student</p>
+            </header>
 
-        <!-- Sections -->
-        <section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-2xl font-semibold text-blue-500 dark:text-yellow-400 mb-4">Education</h2>
-            <div class="space-y-4">
-                <h3 class="font-medium text-gray-700 dark:text-gray-300">BTech in Computer Science and Engineering</h3>
-            </div>
-        </section>
+            <!-- Contact Information -->
+            <section class="section">
+                <h2>Contact Information</h2>
+                <p><a href="mailto:shrinkhalshrinkhal22@gmail.com">shrinkhalshrinkhal22@gmail.com</a></p>
+                <p><a href="https://twitter.com/_Shrinkhal" target="_blank">Twitter</a> | <a href="https://linkedin.com/in/shrinkhal-02761a2b0/" target="_blank">LinkedIn</a> | <a href="https://github.com/shrinkhal01" target="_blank">GitHub</a></p>
+            </section>
 
-        <section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-2xl font-semibold text-blue-500 dark:text-yellow-400 mb-4">Skills</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <h3 class="font-medium mb-2 text-gray-700 dark:text-gray-300">Programming Languages</h3>
-                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-400">
-                        <li>Java</li>
-                        <li>Python</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-medium mb-2 text-gray-700 dark:text-gray-300">Cybersecurity</h3>
-                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-400">
-                        <li>Linux System Security</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            <!-- Summary Section -->
+            <section class="section">
+                <h2>Summary</h2>
+                <p>Proficient in programming languages like Java, experienced in Linux, with strong content creation skills and clear communication.</p>
+            </section>
 
-        <section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-2xl font-semibold text-blue-500 dark:text-yellow-400 mb-4">Projects</h2>
-            <div class="space-y-4">
-                <h3 class="font-medium text-gray-700 dark:text-gray-300">Real-Time Event Reporting System</h3>
-                <p class="text-gray-600 dark:text-gray-400">Designed algorithms for real-time event tracking and verification.</p>
-            </div>
-        </section>
+            <!-- Skills Section -->
+            <section class="section">
+                <h2>Skills and Abilities</h2>
+                <ul>
+                    <li>Proficient in programming languages such as Java, C, and Python</li>
+                    <li>Strong understanding of the Linux operating system</li>
+                    <li>Experience in utilizing DaVinci Resolve for video editing</li>
+                </ul>
+            </section>
 
-        <section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-2xl font-semibold text-blue-500 dark:text-yellow-400 mb-4">Certifications & Experience</h2>
-            <div>
-                <h3 class="font-medium text-gray-700 dark:text-gray-300">Certifications</h3>
-                <p class="text-gray-600 dark:text-gray-400">Google Cybersecurity</p>
-                <p class="text-gray-600 dark:text-gray-400">Red Hat Fundamentals</p>
-            </div>
-        </section>
+            <!-- Education Section -->
+            <section class="section">
+                <h2>Education</h2>
+               <ul>
+                Currently pursuing B.Tech in Computer Science and Engineering
+                </ul>
+            </section>
 
-        <section class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-2xl font-semibold text-blue-500 dark:text-yellow-400 mb-4">Technical Tools</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <h3 class="font-medium mb-2 text-gray-700 dark:text-gray-300">Operating Systems</h3>
-                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-400">
-                        <li>macOS</li>
-                        <li>Linux</li>
-                        <li>Windows</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-medium mb-2 text-gray-700 dark:text-gray-300">Other Tools</h3>
-                    <ul class="list-disc list-inside text-gray-600 dark:text-gray-400">
-                        <li>UTM (Virtual Machines)</li>
-                        <li>Git (Version Control)</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            <!-- Projects Section -->
+            <section class="section">
+                <h2>Projects</h2>
+                <ul>
+                    <li>Real-time Object Detection (TensorFlow and OpenCV) using Python</li>
+                </ul>
+            </section>
 
-        <!-- Footer -->
-        <footer class="text-center text-gray-600 dark:text-gray-400 mt-8 pt-4 border-t border-gray-200 dark:border-gray-700">
-            <p>© 2024 Shrinkhal. All Rights Reserved.</p>
-        </footer>
+            <!-- Certifications Section -->
+            <section class="section">
+                <h2>Certifications</h2>
+                <ul>
+                    <li>Google Cybersecurity</li>
+                    <li>Red Hat Fundamentals</li>
+                </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>© 2024 Shrinkhal. All Rights Reserved.</p>
+            </footer>
+        </div>
     </div>
 
-    <!-- Toggle Mode Script -->
-    <script>
-        function toggleMode() {
-            const body = document.body;
-            const icon = document.getElementById("mode-icon");
-            body.classList.toggle("dark");
-            if (body.classList.contains("dark")) {
-                icon.textContent = "☀️"; // Light mode icon
-            } else {
-                icon.textContent = "🌙"; // Dark mode icon
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
