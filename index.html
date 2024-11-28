@@ -1,139 +1,133 @@
 <!DOCTYPE html>
-<html lang="en-IN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrinkhal's Portfolio</title>
-    <link rel="shortcut icon" href="/web/image/website/1/favicon?unique=1a0a5c2">
-    <style>
-        :root {
-            --background-color: #121212;
-            --text-color: #ffffff;
-            --primary-color: #1e90ff;
-            --secondary-color: #ff6f61;
-            --card-background: #1e1e1e;
-            --card-border: #333333;
+    <title>Your Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
         }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        header {
-            background-color: var(--card-background);
-            border-bottom: 2px solid var(--card-border);
-            padding: 10px 0;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .navbar-brand img {
-            height: 40px;
-        }
-
-        .navbar-nav {
-            list-style: none;
-            display: flex;
-            padding: 0;
-            margin: 0;
-        }
-
-        .nav-item {
-            margin: 0 10px;
-        }
-
-        .nav-link {
-            color: var(--text-color);
-            text-decoration: none;
-        }
-
-        .nav-link:hover {
-            color: var(--primary-color);
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: var(--card-background);
-            border: 1px solid var(--card-border);
-            border-radius: 8px;
-        }
-
-        h1, h2 {
-            color: var(--primary-color);
-        }
-
-        a {
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            border-top: 2px solid var(--card-border);
-            background-color: var(--card-background);
-        }
-
-        footer a {
-            color: var(--primary-color);
-        }
-    </style>
+    </script>
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <a href="/" class="navbar-brand logo">
-                <img src="/web/image/website/1/logo/newshrinkhal?unique=1a0a5c2" alt="newshrinkhal">
-            </a>
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="/" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="/contactus" class="nav-link">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-blue-400 mb-4">Your Name</h1>
+            <p class="text-xl text-gray-400">B.Tech Computer Science and Engineering Student</p>
+        </header>
 
-    <main>
-        <section>
-            <h1>About Me</h1>
-            <p>I'm a final-year B.Tech student specializing in Computer Science with a solid foundation in programming (Java, C, Python) and experience in algorithmic problem-solving. Known for my precision, calm demeanor, and analytical mindset, I simplify complex problems and find efficient solutions.</p>
+        <section class="bg-gray-800 rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-blue-400 border-b border-gray-700 pb-4 mb-6">Education</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="font-bold text-lg">BTech in Computer Science and Engineering</h3>
+                    <p class="text-gray-400">4th Year | Current CGPA: 7.1/10 (till the 5th semester)</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Class 12</h3>
+                    <p class="text-gray-400">Baluni Public School – 86%</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Class 10</h3>
+                    <p class="text-gray-400">Summer Valley School – 76%</p>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Professional Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> Java, C, Python</li>
-                <li><strong>System Administration:</strong> Skilled in Linux administration, preferring simple command-line tools over additional software.</li>
-                <li><strong>Web Development:</strong> Familiar with HTML/CSS and static site hosting; proficient in managing project directories for web applications.</li>
-            </ul>
+        <section class="bg-gray-800 rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-blue-400 border-b border-gray-700 pb-4 mb-6">Skills</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Programming Languages</h3>
+                    <ul class="text-gray-400 list-disc list-inside">
+                        <li>Java</li>
+                        <li>C</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Web Development</h3>
+                    <ul class="text-gray-400 list-disc list-inside">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Static Website Hosting</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Cybersecurity</h3>
+                    <ul class="text-gray-400 list-disc list-inside">
+                        <li>Linux System Security</li>
+                        <li>Bootloader Security Research</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Other Skills</h3>
+                    <ul class="text-gray-400 list-disc list-inside">
+                        <li>Linux Administration</li>
+                        <li>Video Editing</li>
+                        <li>A* Algorithm Implementation</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Education</h2>
-            <p>B.Tech in Computer Science (CSE), 4th year, Graphic Era Deemed to be University</p>
+        <section class="bg-gray-800 rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-blue-400 border-b border-gray-700 pb-4 mb-6">Projects</h2>
+            <div class="space-y-6">
+                <div>
+                    <h3 class="font-bold text-lg text-gray-200">A* Algorithm Implementation</h3>
+                    <p class="text-gray-400">Developed using Java with files like DemoPanel.java, Main.java, and Node.java.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-gray-200">Online Book Store Website</h3>
+                    <p class="text-gray-400">Features include book recommendations and search results. Developed using Python (app.py) and HTML templates.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-gray-200">Real-Time Event Reporting System</h3>
+                    <p class="text-gray-400">Designed approach and algorithms for real-time event tracking and verification.</p>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:shrinkhalshrinkhal22@gmail.com">shrinkhalshrinkhal22@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/shrinkhal-02761a2b0/">Shrinkhal's LinkedIn</a></p>
+        <section class="bg-gray-800 rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-semibold text-blue-400 border-b border-gray-700 pb-4 mb-6">Certifications & Experience</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="font-bold text-lg">Certifications</h3>
+                    <p class="text-gray-400">Google Certification Course</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Experience</h3>
+                    <p class="text-gray-400">College Teacher: Conducted classes and mentored students</p>
+                </div>
+            </div>
         </section>
-    </main>
+
+        <section class="bg-gray-800 rounded-lg shadow-lg p-8">
+            <h2 class="text-2xl font-semibold text-blue-400 border-b border-gray-700 pb-4 mb-6">Technical Tools</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Operating Systems</h3>
+                    <ul class="text-gray-400 list-disc list-inside">
+                        <li>macOS</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-2">Other Tools</h3>
+                    <ul class="text-gray-400 list-disc list-inside">
+                        <li>UTM (Virtual Machines)</li>
+                        <li>Git (Version Control)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 mt-8 pt-4 border-t border-gray-700">
+            <p>© 2024 Your Name. All Rights Reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
