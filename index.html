@@ -10,15 +10,50 @@
             darkMode: 'class',
         }
     </script>
+    <style>
+        :root {
+            --bg-primary: #1a202c;
+            --bg-secondary: #2d3748;
+            --text-primary: #e2e8f0;
+            --text-secondary: #a0aec0;
+            --accent-color: #4299e1;
+        }
+        .dark-mode {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+        }
+        .light-mode {
+            background-color: #ffffff;
+            color: #2d3748;
+        }
+        .mode-toggle {
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 50;
+        }
+        .card {
+            background-color: var(--bg-secondary);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen">
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
+<body class="dark-mode min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl relative">
+        <button onclick="toggleMode()" class="mode-toggle bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition-colors">
+            Toggle Mode
+        </button>
+
         <header class="text-center mb-12">
             <h1 class="text-4xl font-bold text-blue-400 mb-4">Your Name</h1>
             <p class="text-xl text-gray-400">B.Tech Computer Science and Engineering Student</p>
         </header>
 
-        <section class="bg-gray-800 rounded-lg shadow-lg p-8 mb-8">
+        <section class="card">
             <h2 class="text-2xl font-semibold text-blue-400 border-b border-gray-700 pb-4 mb-6">Education</h2>
             <div class="space-y-4">
                 <div>
@@ -36,7 +71,7 @@
             </div>
         </section>
 
-        <section class="bg-gray-800 rounded-lg shadow-lg p-8 mb-8">
+        <section class="card">
             <h2 class="text-2xl font-semibold text-blue-400 border-b border-gray-700 pb-4 mb-6">Skills</h2>
             <div class="grid md:grid-cols-2 gap-4">
                 <div>
@@ -48,32 +83,16 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="font-bold text-lg mb-2">Web Development</h3>
-                    <ul class="text-gray-400 list-disc list-inside">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Static Website Hosting</li>
-                    </ul>
-                </div>
-                <div>
                     <h3 class="font-bold text-lg mb-2">Cybersecurity</h3>
                     <ul class="text-gray-400 list-disc list-inside">
                         <li>Linux System Security</li>
                         <li>Bootloader Security Research</li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="font-bold text-lg mb-2">Other Skills</h3>
-                    <ul class="text-gray-400 list-disc list-inside">
-                        <li>Linux Administration</li>
-                        <li>Video Editing</li>
-                        <li>A* Algorithm Implementation</li>
-                    </ul>
-                </div>
             </div>
         </section>
 
-        <section class="bg-gray-800 rounded-lg shadow-lg p-8 mb-8">
+        <section class="card">
             <h2 class="text-2xl font-semibold text-blue-400 border-b border-gray-700 pb-4 mb-6">Projects</h2>
             <div class="space-y-6">
                 <div>
@@ -82,30 +101,26 @@
                 </div>
                 <div>
                     <h3 class="font-bold text-lg text-gray-200">Online Book Store Website</h3>
-                    <p class="text-gray-400">Features include book recommendations and search results. Developed using Python (app.py) and HTML templates.</p>
+                    <p class="text-gray-400">Features book recommendations and search results. Developed using Python and HTML.</p>
                 </div>
                 <div>
                     <h3 class="font-bold text-lg text-gray-200">Real-Time Event Reporting System</h3>
-                    <p class="text-gray-400">Designed approach and algorithms for real-time event tracking and verification.</p>
+                    <p class="text-gray-400">Designed algorithms for real-time event tracking and verification.</p>
                 </div>
             </div>
         </section>
 
-        <section class="bg-gray-800 rounded-lg shadow-lg p-8 mb-8">
+        <section class="card">
             <h2 class="text-2xl font-semibold text-blue-400 border-b border-gray-700 pb-4 mb-6">Certifications & Experience</h2>
-            <div class="space-y-4">
-                <div>
-                    <h3 class="font-bold text-lg">Certifications</h3>
-                    <p class="text-gray-400">Google Certification Course</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg">Experience</h3>
-                    <p class="text-gray-400">College Teacher: Conducted classes and mentored students</p>
-                </div>
+            <div>
+                <h3 class="font-bold text-lg">Certifications</h3>
+                <p class="text-gray-400">Google Certification Course</p>
+                <h3 class="font-bold text-lg mt-4">Experience</h3>
+                <p class="text-gray-400">College Teacher: Conducted classes and mentored students</p>
             </div>
         </section>
 
-        <section class="bg-gray-800 rounded-lg shadow-lg p-8">
+        <section class="card">
             <h2 class="text-2xl font-semibold text-blue-400 border-b border-gray-700 pb-4 mb-6">Technical Tools</h2>
             <div class="grid md:grid-cols-2 gap-4">
                 <div>
@@ -129,5 +144,12 @@
             <p>© 2024 Your Name. All Rights Reserved.</p>
         </footer>
     </div>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
 </body>
 </html>
