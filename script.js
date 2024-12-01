@@ -7,7 +7,6 @@ window.onload = () => {
         document.body.classList.add("light-mode");
     }
 };
-
 // Smooth scrolling
 document.querySelectorAll("nav a").forEach(anchor => {
     anchor.addEventListener("click", function(e) {
