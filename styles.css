@@ -9,8 +9,8 @@ body {
 
 /* Light Mode */
 body.light-mode {
-    background-image: linear-gradient(to bottom right, #f1f5f9, #e2e8f0);  /* Softer light gradient */
-    color: #e2e8f0;  /* Darker gray text for better readability */
+    background-color: #f7fafc;  /* Light gray background */
+    color: #2d3748;  /* Dark text color for readability */
 }
 
 /* Dark Mode */
@@ -24,10 +24,10 @@ body.dark-mode {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);  /* Slightly transparent */
-    backdrop-filter: blur(12px);  /* Reduced blur */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
     border-radius: 15px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
 }
 
 /* Navbar */
@@ -37,8 +37,8 @@ body.dark-mode {
     z-index: 1000;
     display: flex;
     justify-content: center;
-    background: rgba(66, 153, 225, 0.1); /* Softer background for the navbar */
-    backdrop-filter: blur(8px);  /* Reduced blur for less distraction */
+    background: rgba(31, 38, 135, 0.3);
+    backdrop-filter: blur(10px);
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -77,7 +77,7 @@ h1, h2 {
     right: 20px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #4fd1c5, #38b2ac); /* Softer gradient for the button */
+    background: linear-gradient(135deg, #4299e1, #3182ce);
     color: white;
     border: none;
     border-radius: 50%;
@@ -110,18 +110,18 @@ body {
 
 .header p {
     font-size: 1.2rem;
-    color: #e2e8f0;
+    color: #2d3748;  /* Explicit color for paragraph text in light mode */
 }
 
 /* Links Styling */
 a {
-    color: #38b2ac;  /* A soft teal for links */
+    color: #4299e1;
     text-decoration: none;
     transition: all 0.2s ease;
 }
 
 a:hover {
-    color: #4fd1c5;
+    color: #3182ce;
     text-decoration: underline;
 }
 
@@ -131,25 +131,45 @@ a:hover {
     padding: 30px 0;
 }
 
+/* Subheading Style (Futuristic Boxed Effect) */
 .section h2 {
-    color: #4299e1;
+    position: relative;
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 1px;
+    color: #4299e1;
+    padding: 15px;
+    text-align: center;
+    background: rgba(66, 153, 225, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(66, 153, 225, 0.3);
+    border: 2px solid rgba(66, 153, 225, 0.3); /* Subtle border */
+    transition: all 0.3s ease;
 }
 
-/* Scrollbar Styling */
-::-webkit-scrollbar {
-    width: 10px;
+.section h2:hover {
+    background: rgba(66, 153, 225, 0.3);
+    box-shadow: 0 8px 25px rgba(66, 153, 225, 0.5);
 }
 
-::-webkit-scrollbar-track {
-    background: rgba(66, 153, 225, 0.1);
+/* List Items inside Futuristic Boxes */
+ul li {
+    background: rgba(66, 153, 225, 0.1);  /* Light transparent blue */
+    color: #2d3748;  /* Dark text color */
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(66, 153, 225, 0.2);  /* Border with subtle glow */
+    box-shadow: 0 4px 10px rgba(66, 153, 225, 0.2);  /* Soft shadow */
+    transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #4299e1;
-    border-radius: 5px;
+ul li:hover {
+    background: rgba(66, 153, 225, 0.3); /* Darker on hover */
+    box-shadow: 0 8px 15px rgba(66, 153, 225, 0.3); /* Glowing effect */
+    transform: translateY(-5px); /* Slight lift effect */
 }
 
 /* Certifications Gallery */
@@ -161,7 +181,7 @@ a:hover {
 }
 
 .certificate {
-    background: rgba(255, 255, 255, 0.1); /* Softer background for certificates */
+    background: rgba(255, 255, 255, 0.2);
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -202,14 +222,14 @@ a:hover {
 .footer {
     text-align: center;
     padding: 20px 0;
-    background-color: rgba(66, 153, 225, 0.1); /* Soft background for the footer */
-    color: #e2e8f0;  /* Softer text color in the footer */
+    background-color: rgba(66, 153, 225, 0.1);
+    color: #2d3748;  /* Explicit color for footer text in light mode */
 }
 
 .footer p {
     font-size: 0.9rem;
 }
-  
+
 /* Subtle Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
