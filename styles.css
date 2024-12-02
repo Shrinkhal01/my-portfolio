@@ -5,6 +5,8 @@ body {
     padding: 0;
     transition: all 0.5s ease-in-out;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Light Mode */
@@ -229,6 +231,40 @@ ul li:hover {
 .footer p {
     font-size: 0.9rem;
 }
+
+.navbar, .header, .mode-toggle {
+    transition: background 0.5s ease, color 0.5s ease;
+}
+#projects ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(66, 153, 225, 0.2);
+    background: rgba(66, 153, 225, 0.1);
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+#projects ul li:hover {
+    background: rgba(66, 153, 225, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(66, 153, 225, 0.3);
+}
+
+#projects ul li span {
+    font-weight: bold;
+    color: #4299e1;
+}
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(66, 153, 225, 0.2); /* Slightly lighter */
+    color: #e2e8f0;  /* Lighter color for text */
+    border-top: 2px solid rgba(66, 153, 225, 0.3);
+}
+
 
 /* Subtle Animations */
 @keyframes fadeIn {
