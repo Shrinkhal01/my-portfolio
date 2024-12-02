@@ -10,7 +10,7 @@ body {
 /* Light Mode */
 body.light-mode {
     background-image: linear-gradient(to bottom right, #f1f5f9, #e2e8f0);  /* Softer light gradient */
-    color: #4a5568;  /* Darker gray text for better readability */
+    color: #e2e8f0;  /* Darker gray text for better readability */
 }
 
 /* Dark Mode */
@@ -203,7 +203,7 @@ a:hover {
     text-align: center;
     padding: 20px 0;
     background-color: rgba(66, 153, 225, 0.1); /* Soft background for the footer */
-    color: #4a5568;  /* Softer text color in the footer */
+    color: #e2e8f0;  /* Softer text color in the footer */
 }
 
 .footer p {
