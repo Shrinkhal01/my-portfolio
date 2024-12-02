@@ -9,8 +9,8 @@ body {
 
 /* Light Mode */
 body.light-mode {
-    background-image: linear-gradient(to bottom right, #f7fafc, #e6f2ff);
-    color: #2d3748;
+    background-image: linear-gradient(to bottom right, #f1f5f9, #e2e8f0);  /* Softer light gradient */
+    color: #4a5568;  /* Darker gray text for better readability */
 }
 
 /* Dark Mode */
@@ -24,10 +24,10 @@ body.dark-mode {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);  /* Slightly transparent */
+    backdrop-filter: blur(12px);  /* Reduced blur */
     border-radius: 15px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Softer shadow */
 }
 
 /* Navbar */
@@ -37,8 +37,8 @@ body.dark-mode {
     z-index: 1000;
     display: flex;
     justify-content: center;
-    background: rgba(31, 38, 135, 0.3);
-    backdrop-filter: blur(10px);
+    background: rgba(66, 153, 225, 0.1); /* Softer background for the navbar */
+    backdrop-filter: blur(8px);  /* Reduced blur for less distraction */
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -77,7 +77,7 @@ h1, h2 {
     right: 20px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #4299e1, #3182ce);
+    background: linear-gradient(135deg, #4fd1c5, #38b2ac); /* Softer gradient for the button */
     color: white;
     border: none;
     border-radius: 50%;
@@ -115,13 +115,13 @@ body {
 
 /* Links Styling */
 a {
-    color: #4299e1;
+    color: #38b2ac;  /* A soft teal for links */
     text-decoration: none;
     transition: all 0.2s ease;
 }
 
 a:hover {
-    color: #3182ce;
+    color: #4fd1c5;
     text-decoration: underline;
 }
 
@@ -161,7 +161,7 @@ a:hover {
 }
 
 .certificate {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1); /* Softer background for certificates */
     padding: 15px;
     border-radius: 10px;
     text-align: center;
@@ -202,8 +202,8 @@ a:hover {
 .footer {
     text-align: center;
     padding: 20px 0;
-    background-color: rgba(66, 153, 225, 0.1);
-    color: #e2e8f0;
+    background-color: rgba(66, 153, 225, 0.1); /* Soft background for the footer */
+    color: #4a5568;  /* Softer text color in the footer */
 }
 
 .footer p {
