@@ -1,20 +1,16 @@
-// Function to toggle dark and light mode
 function toggleMode() {
-    const body = document.body;
-
-    // Check if dark mode is already applied
-    if (body.classList.contains('dark-mode')) {
-        // Switch to light mode
-        body.classList.remove('dark-mode');
-        body.classList.add('light-mode');
-        localStorage.setItem('theme', 'light');  // Save light mode preference
+    const currentMode = document.body.classList.contains("dark-mode");
+    if (currentMode) {
+        document.body.classList.remove("dark-mode");
+        document.body.classList.add("light-mode");
+        document.querySelector(".mode-toggle span").textContent = "🌞"; // Change to sun in light mode
     } else {
-        // Switch to dark mode
-        body.classList.remove('light-mode');
-        body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');  // Save dark mode preference
+        document.body.classList.remove("light-mode");
+        document.body.classList.add("dark-mode");
+        document.querySelector(".mode-toggle span").textContent = "🌙"; // Change to moon in dark mode
     }
 }
+
 
 // Auto-detect user preference on page load
 window.onload = () => {
