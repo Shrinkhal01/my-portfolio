@@ -5,8 +5,6 @@ body {
     padding: 0;
     transition: all 0.5s ease-in-out;
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Light Mode */
@@ -95,11 +93,6 @@ h1, h2 {
     transform: rotate(360deg) scale(1.1);
 }
 
-/* Add transition effects when switching modes */
-body {
-    transition: background 0.5s ease, color 0.5s ease;
-}
-
 /* Header */
 .header {
     text-align: center;
@@ -174,50 +167,43 @@ ul li:hover {
     transform: translateY(-5px); /* Slight lift effect */
 }
 
-/* Certifications Gallery */
-.certifications-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
-.certificate {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 15px;
-    border-radius: 10px;
+.skill-card {
+    background: rgba(66, 153, 225, 0.2);
+    padding: 30px;
+    border-radius: 15px;
     text-align: center;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    width: 150px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.certificate:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+.skill-card img {
+    width: 50px;
+    margin-bottom: 10px;
 }
 
-.certificate img {
-    max-width: 100%;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.certificate img:hover {
-    transform: scale(1.05);
-}
-
-.certificate-link {
-    display: inline-block;
-    margin-top: 10px;
-    font-size: 1rem;
+.skill-card p {
+    font-size: 1.2rem;
     color: #4299e1;
-    text-decoration: none;
-    transition: color 0.2s ease;
+    font-weight: bold;
 }
 
-.certificate-link:hover {
-    color: #3182ce;
-    text-decoration: underline;
+/* Hover effect */
+.skill-card:hover {
+    background: rgba(66, 153, 225, 0.4);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer Styling */
@@ -232,42 +218,44 @@ ul li:hover {
     font-size: 0.9rem;
 }
 
-.navbar, .header, .mode-toggle {
-    transition: background 0.5s ease, color 0.5s ease;
-}
-#projects ul li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid rgba(66, 153, 225, 0.2);
-    background: rgba(66, 153, 225, 0.1);
-    margin: 10px 0;
-    transition: all 0.3s ease;
-}
-
-#projects ul li:hover {
-    background: rgba(66, 153, 225, 0.3);
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(66, 153, 225, 0.3);
-}
-
-#projects ul li span {
-    font-weight: bold;
-    color: #4299e1;
-}
-.footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: rgba(66, 153, 225, 0.2); /* Slightly lighter */
-    color: #e2e8f0;  /* Lighter color for text */
-    border-top: 2px solid rgba(66, 153, 225, 0.3);
-}
-
-
 /* Subtle Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 180px;
+    }
 }

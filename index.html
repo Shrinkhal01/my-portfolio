@@ -8,8 +8,10 @@
     <meta name="author" content="Shrinkhal">
     <title>Shrinkhal's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
-<body class="dark-mode">
+<body>
+    <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
     <nav class="navbar">
         <ul>
             <li><a href="#contact">Contact</a></li>
@@ -20,9 +22,9 @@
     </nav>
     <div class="container">
         <button onclick="toggleMode()" class="mode-toggle" aria-label="Toggle Mode">
-            <span>🌙</span> <!-- Default to moon for dark mode -->
+            <span>🌙</span>
         </button>
-        <header class="header">
+        <header class="hero">
             <h1>S H R I N K H A L</h1>
             <p>B.Tech Computer Science and Engineering Student</p>
             <p>"Transforming ideas into impactful solutions."</p>
@@ -39,16 +41,53 @@
         </section>
 
         <section id="skills" class="section">
-            <h2>Skills and Abilities</h2>
-            <ul>
-                <li>Programming: Java, Python, C</li>
-                <li>Linux System Administration</li>
-                <li>Machine Learning and OpenCV</li>
-                <li>Video Editing: DaVinci Resolve</li>
-            </ul>
+            <div class="skills-container">
+                <section id="skills" class="section">
+                    <h2>Skills and Abilities</h2>
+                    <div class="skills-container">
+                        <div class="skill-card" data-skill="Python">
+                            <img src="python-logo.png" alt="Python" />
+                            <p>Python</p>
+                        </div>
+                        <div class="skill-card" data-skill="Java">
+                            <img src="java-logo.png" alt="Cybersecurity" />
+                            <p>Java</p>
+                        </div>
+                        <div class="skill-card" data-skill="Cybersecurity">
+                            <img src="cybersecurity-logo.png" alt="Cybersecurity" />
+                            <p>Cybersecurity</p>
+                        </div>
+                        <div class="skill-card" data-skill="Linux">
+                            <img src="linux-logo.png" alt="Linux" />
+                            <p>Linux</p>
+                        </div>
+                        <div class="skill-card" data-skill="SQL">
+                            <img src="sql-logo.png" alt="SQL" />
+                            <p>SQL</p>
+                        </div>
+                        <div class="skill-card" data-skill="TensorFlow">
+                            <img src="tensorflow-logo.png" alt="TensorFlow" />
+                            <p>TensorFlow</p>
+                        </div>
+                        <div class="skill-card" data-skill="Bash">
+                            <img src="bash-logo.png" alt="Bash" />
+                            <p>Bash</p>
+                        </div>
+                        <div class="skill-card" data-skill="Network Security">
+                            <img src="network-security-logo.png" alt="Network Security" />
+                            <p>Network Security</p>
+                        </div>
+                        <div class="skill-card" data-skill="IDS">
+                            <img src="ids-logo.png" alt="IDS" />
+                            <p>IDS</p>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
         </section>
 
-        <section id="projects" class="section">
+        <section id="projects" class="section" data-aos="fade-up">
             <h2>Projects</h2>
             <ul>
                 <li>Real-time Object Detection: A Python-based system using TensorFlow and OpenCV</li>
@@ -70,4 +109,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
