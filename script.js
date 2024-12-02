@@ -1,18 +1,23 @@
 function toggleMode() {
     const currentMode = document.body.classList.contains("dark-mode");
+    const modeButton = document.querySelector(".mode-toggle");
+    const modeIcon = document.querySelector(".mode-toggle span");
 
     if (currentMode) {
         document.body.classList.remove("dark-mode");
         document.body.classList.add("light-mode");
-        document.querySelector(".mode-toggle span").textContent = "🌞"; // Sun for light mode
-        localStorage.setItem('theme', 'light'); // Save light mode preference
+        modeIcon.textContent = "🌞"; // Sun for light mode
+        modeButton.setAttribute('aria-label', 'Switch to Dark Mode');
+        localStorage.setItem('theme', 'light');
     } else {
         document.body.classList.remove("light-mode");
         document.body.classList.add("dark-mode");
-        document.querySelector(".mode-toggle span").textContent = "🌙"; // Moon for dark mode
-        localStorage.setItem('theme', 'dark'); // Save dark mode preference
+        modeIcon.textContent = "🌙"; // Moon for dark mode
+        modeButton.setAttribute('aria-label', 'Switch to Light Mode');
+        localStorage.setItem('theme', 'dark');
     }
 }
+
 
 // Auto-detect user preference on page load
 window.onload = () => {
