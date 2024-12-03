@@ -1,41 +1,47 @@
 function toggleMode() {
-    const currentMode = document.body.classList.contains("dark-mode");
+    const isDarkMode = document.body.classList.contains("dark-mode");
 
-    if (currentMode) {
-        document.body.classList.remove("dark-mode");
-        document.body.classList.add("light-mode");
-        document.querySelector(".mode-toggle span").textContent = "🌞"; 
+    if (isDarkMode) {
+        document.body.classList.replace("dark-mode", "light-mode");
+        document.querySelector(".mode-toggle span").textContent = "🌞";
         localStorage.setItem('theme', 'light');
     } else {
-        document.body.classList.remove("light-mode");
-        document.body.classList.add("dark-mode");
-        document.querySelector(".mode-toggle span").textContent = "🌙"; 
+        document.body.classList.replace("light-mode", "dark-mode");
+        document.querySelector(".mode-toggle span").textContent = "🌙";
         localStorage.setItem('theme', 'dark');
     }
 }
 
 window.onload = () => {
     const savedTheme = localStorage.getItem('theme');
+    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
     if (savedTheme) {
-        document.body.classList.add(savedTheme + '-mode');
+        document.body.classList.add(savedTheme === 'dark' ? 'dark-mode' : 'light-mode');
         document.querySelector(".mode-toggle span").textContent = savedTheme === 'dark' ? '🌙' : '🌞';
     } else {
-        const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (prefersDarkMode) {
-            document.body.classList.add("dark-mode");
-            document.querySelector(".mode-toggle span").textContent = '🌙';
-        } else {
-            document.body.classList.add("light-mode");
-            document.querySelector(".mode-toggle span").textContent = '🌞';
-        }
+        document.body.classList.add(prefersDarkMode ? 'dark-mode' : 'light-mode');
+        document.querySelector(".mode-toggle span").textContent = prefersDarkMode ? '🌙' : '🌞';
     }
 
+    // Initialize particles.js after the page loads
     particlesJS('particles-js', {
         particles: {
-            number: { value: 80 },
-            size: { value: 3 },
-            move: { speed: 2 },
-            line_linked: { enable: true, color: '#4299e1', opacity: 0.3, width: 2 }
+            number: { value: 40 }, // Fewer particles for better performance
+            size: { value: 2 }, // Smaller particles
+            move: { speed: 1 }, // Slower movement
+            line_linked: {
+                enable: true,
+                color: '#4299e1',
+                opacity: 0.3,
+                width: 1,
+            }
+        },
+        interactivity: {
+            events: {
+                onhover: { enable: true, mode: "repulse" },
+                onclick: { enable: true, mode: "push" },
+            }
         }
     });
 };
