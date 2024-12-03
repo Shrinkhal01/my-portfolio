@@ -1,41 +1,291 @@
-<section id="skills" class="section skills-section">
-    <h2>Skills and Abilities</h2>
-    <div class="skills-container">
-        <div class="skill-card" data-skill="Python">
-            <img src="python-logo.png" alt="Python" />
-            <p>Python</p>
-        </div>
-        <div class="skill-card" data-skill="Java">
-            <img src="java-logo.png" alt="Java" />
-            <p>Java</p>
-        </div>
-        <div class="skill-card" data-skill="Cybersecurity">
-            <img src="cybersecurity-logo.png" alt="Cybersecurity" />
-            <p>Cybersecurity</p>
-        </div>
-        <div class="skill-card" data-skill="Linux">
-            <img src="linux-logo.png" alt="Linux" />
-            <p>Linux</p>
-        </div>
-        <div class="skill-card" data-skill="SQL">
-            <img src="sql-logo.png" alt="SQL" />
-            <p>SQL</p>
-        </div>
-        <div class="skill-card" data-skill="TensorFlow">
-            <img src="tensorflow-logo.png" alt="TensorFlow" />
-            <p>TensorFlow</p>
-        </div>
-        <div class="skill-card" data-skill="Bash">
-            <img src="bash-logo.png" alt="Bash" />
-            <p>Bash</p>
-        </div>
-        <div class="skill-card" data-skill="Network Security">
-            <img src="network-security-logo.png" alt="Network Security" />
-            <p>Network Security</p>
-        </div>
-        <div class="skill-card" data-skill="IDS">
-            <img src="ids-logo.png" alt="IDS" />
-            <p>IDS</p>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Shrinkhal, a B.Tech Computer Science and Engineering student proficient in Java, Linux, and machine learning.">
+    <meta name="keywords" content="Shrinkhal, portfolio, Java, Linux, machine learning, web development">
+    <meta name="author" content="Shrinkhal">
+    <title>Shrinkhal's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .navbar li {
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* Hero section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #222;
+            color: white;
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Contact section */
+        #contact {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        #contact h2 {
+            font-size: 2rem;
+        }
+
+        #contact a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Skills section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 20px; /* Adjust gap between cards */
+            padding: 20px;
+        }
+
+        .skill-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: none;
+            padding: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .skill-card img {
+            max-width: 60px; /* Adjust logo size */
+            max-height: 60px; /* Ensure logos are consistent in size */
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Projects section */
+        #projects {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        #projects h2 {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            width: 300px;
+            margin: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer section */
+        .footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Mode toggle button */
+        .mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .mode-toggle span {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <button onclick="toggleMode()" class="mode-toggle" aria-label="Toggle Mode">
+            <span>🌙</span>
+        </button>
+
+        <header class="hero">
+            <h1>S H R I N K H A L</h1>
+            <p>B.Tech Computer Science and Engineering Student</p>
+            <p>"Transforming ideas into impactful solutions."</p>
+        </header>
+
+        <section id="contact" class="section">
+            <h2>Contact Information</h2>
+            <p><a href="mailto:shrinkhalshrinkhal22@gmail.com">shrinkhalshrinkhal22@gmail.com</a></p>
+            <p>
+                <a href="https://twitter.com/_Shrinkhal" target="_blank">Twitter</a> |
+                <a href="https://linkedin.com/in/shrinkhal-02761a2b0/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/shrinkhal01" target="_blank">GitHub</a>
+            </p>
+        </section>
+
+        <section id="skills" class="section skills-section">
+            <h2>Skills and Abilities</h2>
+            <div class="skills-container">
+                <div class="skill-card" data-skill="Python">
+                    <img src="python-logo.png" alt="Python" />
+                    <p>Python</p>
+                </div>
+                <div class="skill-card" data-skill="Java">
+                    <img src="java-logo.png" alt="Java" />
+                    <p>Java</p>
+                </div>
+                <div class="skill-card" data-skill="Cybersecurity">
+                    <img src="cybersecurity-logo.png" alt="Cybersecurity" />
+                    <p>Cybersecurity</p>
+                </div>
+                <div class="skill-card" data-skill="Linux">
+                    <img src="linux-logo.png" alt="Linux" />
+                    <p>Linux</p>
+                </div>
+                <div class="skill-card" data-skill="SQL">
+                    <img src="sql-logo.png" alt="SQL" />
+                    <p>SQL</p>
+                </div>
+                <div class="skill-card" data-skill="TensorFlow">
+                    <img src="tensorflow-logo.png" alt="TensorFlow" />
+                    <p>TensorFlow</p>
+                </div>
+                <div class="skill-card" data-skill="Bash">
+                    <img src="bash-logo.png" alt="Bash" />
+                    <p>Bash</p>
+                </div>
+                <div class="skill-card" data-skill="Network Security">
+                    <img src="network-security-logo.png" alt="Network Security" />
+                    <p>Network Security</p>
+                </div>
+                <div class="skill-card" data-skill="IDS">
+                    <img src="ids-logo.png" alt="IDS" />
+                    <p>IDS</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Real-time Object Detection</h3>
+                    <p>A Python-based system using TensorFlow and OpenCV.</p>
+                    <a href="#">Learn More</a> <!-- Add a link if you want to redirect to a project page or repository -->
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section">
+            <h2>Certifications</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Google Cybersecurity</h3>
+                    <p>A certification covering key aspects of cybersecurity practices.</p>
+                    <a href="https://coursera.org/share/59a78602ddc15cd4974e8d4a70c91e16">View Certificate</a>
+                </div>
+                <div class="card">
+                    <h3>Red Hat Fundamentals</h3>
+                    <p>Fundamentals of Linux system administration by Red Hat.</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/5SM6I9EGM2O5">View Certificate</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2024 Shrinkhal. All Rights Reserved.</p>
+        </footer>
     </div>
-</section>
+
+    <script src="script.js"></script>
+</body>
+</html>
