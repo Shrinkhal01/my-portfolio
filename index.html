@@ -20,7 +20,6 @@
             <li><a href="#certifications">Certifications</a></li>
         </ul>
     </nav>
-
     <div class="container">
         <button onclick="toggleMode()" class="mode-toggle" aria-label="Toggle Mode">
             <span>🌙</span>
@@ -35,70 +34,84 @@
             <h2>Contact Information</h2>
             <p><a href="mailto:shrinkhalshrinkhal22@gmail.com">shrinkhalshrinkhal22@gmail.com</a></p>
             <p>
-                <a href="https://twitter.com/_Shrinkhal" target="_blank">Twitter</a> |
-                <a href="https://linkedin.com/in/shrinkhal-02761a2b0/" target="_blank">LinkedIn</a> |
+                <a href="https://twitter.com/_Shrinkhal" target="_blank">Twitter</a> | 
+                <a href="https://linkedin.com/in/shrinkhal-02761a2b0/" target="_blank">LinkedIn</a> | 
                 <a href="https://github.com/shrinkhal01" target="_blank">GitHub</a>
             </p>
         </section>
 
-        <section id="skills" class="section">
+        <section id="skills" class="section skills-section">
             <h2>Skills and Abilities</h2>
             <div class="skills-container">
-                <div class="skill-card">
+                <div class="skill-card" data-skill="Python">
                     <img src="python-logo.png" alt="Python" />
                     <p>Python</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-skill="Java">
                     <img src="java-logo.png" alt="Java" />
                     <p>Java</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-skill="Cybersecurity">
                     <img src="cybersecurity-logo.png" alt="Cybersecurity" />
                     <p>Cybersecurity</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-skill="Linux">
                     <img src="linux-logo.png" alt="Linux" />
                     <p>Linux</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-skill="SQL">
                     <img src="sql-logo.png" alt="SQL" />
                     <p>SQL</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-skill="TensorFlow">
                     <img src="tensorflow-logo.png" alt="TensorFlow" />
                     <p>TensorFlow</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-skill="Bash">
                     <img src="bash-logo.png" alt="Bash" />
                     <p>Bash</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-skill="Network Security">
                     <img src="network-security-logo.png" alt="Network Security" />
                     <p>Network Security</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-skill="IDS">
                     <img src="ids-logo.png" alt="IDS" />
                     <p>IDS</p>
                 </div>
             </div>
-            <div class="section-divider"></div>
         </section>
+        
 
+        <!-- Projects Section -->
         <section id="projects" class="section">
             <h2>Projects</h2>
-            <ul>
-                <li>Real-time Object Detection: A Python-based system using TensorFlow and OpenCV</li>
-            </ul>
-            <div class="section-divider"></div>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Real-time Object Detection</h3>
+                    <p>A Python-based system using TensorFlow and OpenCV.</p>
+                    <a href="#">Learn More</a> <!-- Add a link if you want to redirect to a project page or repository -->
+                </div>
+            </div>
         </section>
 
+        <!-- Certifications Section -->
         <section id="certifications" class="section">
             <h2>Certifications</h2>
-            <ul>
-                <li>Google Cybersecurity</li>
-                <li>Red Hat Fundamentals</li>
-            </ul>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Google Cybersecurity</h3>
+                    <p>A certification covering key aspects of cybersecurity practices.</p>
+                    <a href="#">View Certificate</a> <!-- Add a link to certificate or more info -->
+                </div>
+                <div class="card">
+                    <h3>Red Hat Fundamentals</h3>
+                    <p>Fundamentals of Linux system administration by Red Hat.</p>
+                    <a href="#">View Certificate</a>
+                </div>
+            </div>
         </section>
+
 
         <footer class="footer">
             <p>© 2024 Shrinkhal. All Rights Reserved.</p>

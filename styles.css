@@ -1,10 +1,11 @@
 /* Base Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    transition: all 0.3s ease;
+    scroll-behavior: smooth;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Light Mode */
@@ -19,72 +20,124 @@ body.dark-mode {
     color: #e2e8f0;
 }
 
+/* Particles Background */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Positioned on the right */
+    width: 60px; /* Larger button size */
+    height: 60px; /* Larger button size */
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensures visibility over other elements */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mode-toggle:hover {
+    transform: scale(1.1); /* Subtle hover effect */
+}
+
+.mode-toggle span {
+    font-size: 1.5rem; /* Slightly larger icon */
+}
+
+
 /* Navbar */
 .navbar {
     position: sticky;
     top: 0;
     background: rgba(31, 38, 135, 0.3);
-    padding: 10px 0;
-    z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
+    padding: 10px;
+    z-index: 1000;
 }
 
 .navbar ul {
     display: flex;
     gap: 20px;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar li a {
-    text-decoration: none;
     color: #e2e8f0;
+    text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Hero Section */
-.hero {
+.navbar li a:hover {
+    color: #4299e1;
+}
+
+/* Section */
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Skill Cards Styling */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.skill-card {
+    background-color: #f7fafc;
+    border: 2px solid #4299e1;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    min-height: 60vh;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    color: #4299e1;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-/* Skills Section */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
     padding: 20px;
-    justify-items: center;
-    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    height: 150px; /* Uniform height for all cards */
+    width: 150px;  /* Uniform width for all cards */
+    box-sizing: border-box;
 }
 
-.skill-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    background: rgba(66, 153, 225, 0.1);
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.skill-card img {
+    width: 50px; /* Uniform logo size */
+    height: 50px; /* Uniform logo size */
+    margin-bottom: 10px;
 }
 
+.skill-card p {
+    font-size: 1rem;
+    color: #2d3748;
+    font-weight: bold;
+}
+
+/* Hover effect for skill cards */
 .skill-card:hover {
-    transform: translateY(-5px);
+    background-color: #e2e8f0;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 /* Footer */
@@ -92,4 +145,30 @@ body.dark-mode {
     text-align: center;
     padding: 20px;
     background: rgba(66, 153, 225, 0.1);
+    color: #2d3748;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 60vh; /* Adjusted to keep the section vertically centered */
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem); /* Ensures responsiveness */
+    color: #4299e1;
+    text-shadow: 0 0 10px rgba(66, 153, 225, 0.5);
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 10px; /* Space between title and description */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: inherit;
+    margin: 5px 0; /* Spacing for better alignment */
 }
