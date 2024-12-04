@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Shrinkhal, a B.Tech Computer Science and Engineering student proficient in Java, Linux, and machine learning.">
-    <meta name="keywords" content="Shrinkhal, portfolio, Java, Linux, machine learning, web development">
+    <meta name="description" content="Portfolio of Shrinkhal - B.Tech Computer Science and Engineering student, specializing in Java, Linux, and machine learning.">
+    <meta name="keywords" content="Shrinkhal, portfolio, Java, Linux, cybersecurity, machine learning, web development">
     <meta name="author" content="Shrinkhal">
     <title>Shrinkhal's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
@@ -12,111 +12,101 @@
 </head>
 <body>
     <div id="particles-js"></div>
+
+    <!-- Navbar -->
     <nav class="navbar">
         <ul>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#hero">Home</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <button onclick="toggleMode()" class="mode-toggle" aria-label="Toggle Mode">
-            <span>🌙</span>
-        </button>
-        <header class="hero">
-            <h1>S H R I N K H A L</h1>
-            <p>B.Tech Computer Science and Engineering Student</p>
-            <p>"Transforming ideas into impactful solutions."</p>
-        </header>
 
-        <section id="contact" class="section">
-            <h2>Contact Information</h2>
-            <p><a href="mailto:shrinkhalshrinkhal22@gmail.com">shrinkhalshrinkhal22@gmail.com</a></p>
-            <p>
-                <a href="https://twitter.com/_Shrinkhal" target="_blank">Twitter</a> | 
-                <a href="https://linkedin.com/in/shrinkhal-02761a2b0/" target="_blank">LinkedIn</a> | 
-                <a href="https://github.com/shrinkhal01" target="_blank">GitHub</a>
-            </p>
-        </section>
+    <!-- Theme Toggle Button -->
+    <button onclick="toggleMode()" class="mode-toggle" aria-label="Toggle Theme">
+        <span>🌙</span>
+    </button>
 
-        <section id="skills" class="section skills-section">
-            <h2>Skills and Abilities</h2>
-            <div class="skills-container">
-                <div class="skill-card" data-skill="Python">
-                    <img src="python-logo.png" alt="Python" />
-                    <p>Python</p>
-                </div>
-                <div class="skill-card" data-skill="Java">
-                    <img src="java-logo.png" alt="Java" />
-                    <p>Java</p>
-                </div>
-                <div class="skill-card" data-skill="Cybersecurity">
-                    <img src="cybersecurity-logo.png" alt="Cybersecurity" />
-                    <p>Cybersecurity</p>
-                </div>
-                <div class="skill-card" data-skill="Linux">
-                    <img src="linux-logo.png" alt="Linux" />
-                    <p>Linux</p>
-                </div>
-                <div class="skill-card" data-skill="SQL">
-                    <img src="sql-logo.png" alt="SQL" />
-                    <p>SQL</p>
-                </div>
-                <div class="skill-card" data-skill="TensorFlow">
-                    <img src="tensorflow-logo.png" alt="TensorFlow" />
-                    <p>TensorFlow</p>
-                </div>
-                <div class="skill-card" data-skill="Bash">
-                    <img src="bash-logo.png" alt="Bash" />
-                    <p>Bash</p>
-                </div>
-                <div class="skill-card" data-skill="Network Security">
-                    <img src="network-security-logo.png" alt="Network Security" />
-                    <p>Network Security</p>
-                </div>
-                <div class="skill-card" data-skill="IDS">
-                    <img src="ids-logo.png" alt="IDS" />
-                    <p>IDS</p>
-                </div>
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <h1>Shrinkhal</h1>
+        <p class="subtitle">Innovative Solutions. Transformative Impact.</p>
+        <p>B.Tech in Computer Science & Engineering | Passionate about Cybersecurity, ML & DevOps</p>
+    </header>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>Skills & Expertise</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <img src="bash-logo.png" alt="Bash">
+                <p>Bash</p>
             </div>
-        </section>
-        
-
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Real-time Object Detection</h3>
-                    <p>A Python-based system using TensorFlow and OpenCV.</p>
-                    <a href="#">Learn More</a> <!-- Add a link if you want to redirect to a project page or repository -->
-                </div>
+            <div class="skill-card">
+                <img src="cybersecurity-logo.png" alt="Cybersecurity">
+                <p>Cybersecurity</p>
             </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section id="certifications" class="section">
-            <h2>Certifications</h2>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Google Cybersecurity</h3>
-                    <p>A certification covering key aspects of cybersecurity practices.</p>
-                    <a href="https://coursera.org/share/59a78602ddc15cd4974e8d4a70c91e16">View Certificate</a> <!-- Add a link to certificate or more info -->
-                </div>
-                <div class="card">
-                    <h3>Red Hat Fundamentals</h3>
-                    <p>Fundamentals of Linux system administration by Red Hat.</p>
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/5SM6I9EGM2O5">View Certificate</a>
-                </div>
+            <div class="skill-card">
+                <img src="ids-logo.png" alt="IDS">
+                <p>IDS</p>
             </div>
-        </section>
+            <div class="skill-card">
+                <img src="java-logo.png" alt="Java">
+                <p>Java</p>
+            </div>
+            <div class="skill-card">
+                <img src="linux-logo.png" alt="Linux">
+                <p>Linux</p>
+            </div>
+            <div class="skill-card">
+                <img src="network-security-logo.png" alt="Network Security">
+                <p>Network Security</p>
+            </div>
+            <div class="skill-card">
+                <img src="python-logo.png" alt="Python">
+                <p>Python</p>
+            </div>
+            <div class="skill-card">
+                <img src="sql-logo.png" alt="SQL">
+                <p>SQL</p>
+            </div>
+            <div class="skill-card">
+                <img src="tensorflow-logo.png" alt="TensorFlow">
+                <p>TensorFlow</p>
+            </div>
+        </div>
+    </section>
 
 
-        <footer class="footer">
-            <p>© 2024 Shrinkhal. All Rights Reserved.</p>
-        </footer>
-    </div>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Real-time Object Detection</h3>
+                <p>Python system utilizing TensorFlow and OpenCV for real-time image recognition.</p>
+                <a href="https://github.com/Shrinkhal01/-Real-time-Object-Detection-using-TensorFlow-and-OpenCV" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:shrinkhalshrinkhal22@gmail.com">shrinkhalshrinkhal22@gmail.com</a></p>
+        <p>
+            <a href="https://twitter.com/_Shrinkhal" target="_blank">Twitter</a> |
+            <a href="https://linkedin.com/in/shrinkhal-02761a2b0/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/shrinkhal01" target="_blank">GitHub</a>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Shrinkhal. All Rights Reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

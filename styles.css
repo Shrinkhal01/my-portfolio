@@ -1,24 +1,22 @@
-/* Base Styles */
+/* General Styles */
 body {
-    font-family: 'Arial', 'Segoe UI', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    scroll-behavior: smooth;
+    background-color: #f4f4f4; /* Lighter background */
+    color: #333;
     transition: all 0.3s ease-in-out;
 }
 
-/* Light Mode */
 body.light-mode {
-    background-color: #f7fafc;
-    color: #2d3748;
+    background-color: #f7f7f7; /* Slightly lighter */
 }
 
-/* Dark Mode */
 body.dark-mode {
-    background-image: linear-gradient(to bottom right, #1a202c, #2c3542);
-    color: #e2e8f0;
+    background-color: #1a202c; /* Darker background for minimalism */
+    color: #e2e8f0; /* Light text for dark mode */
 }
+
 
 /* Particles Background */
 #particles-js {
@@ -28,147 +26,157 @@ body.dark-mode {
     width: 100%;
     height: 100%;
     z-index: -1;
-    pointer-events: none;
 }
-
-.mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px; /* Positioned on the right */
-    width: 60px; /* Larger button size */
-    height: 60px; /* Larger button size */
-    background: linear-gradient(135deg, #4299e1, #3182ce);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000; /* Ensures visibility over other elements */
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.mode-toggle:hover {
-    transform: scale(1.1); /* Subtle hover effect */
-}
-
-.mode-toggle span {
-    font-size: 1.5rem; /* Slightly larger icon */
-}
-
 
 /* Navbar */
 .navbar {
+    background: linear-gradient(90deg, #1a202c 0%, #2d3748 100%);
+    color: white;
+    padding: 15px 20px;
     position: sticky;
     top: 0;
-    background: rgba(31, 38, 135, 0.3);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
+.navbar a {
+    color: white;
+    font-size: 1rem;
+    margin: 0 10px;
+    text-transform: uppercase;
+}
+
 .navbar ul {
-    display: flex;
-    gap: 20px;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    justify-content: space-around;
 }
 
-.navbar li a {
-    color: #e2e8f0;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
 
-.navbar li a:hover {
+.navbar a:hover {
     color: #4299e1;
 }
 
-/* Section */
-.section {
-    padding: 40px;
+/* Hero Section */
+.hero {
     text-align: center;
+    padding: 80px 20px; /* Reduced padding for a tighter look */
+    background: #ffffff; /* Clean background */
+    margin-bottom: 20px; /* Space between sections */
 }
 
-/* Skill Cards Styling */
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.hero p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+/* Skills Section */
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    gap: 20px;
-    justify-items: center;
-    padding: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 15px; /* Reduced gap between tiles */
+    margin-top: 30px;
+    padding: 10px; /* Added padding for spacing */
 }
 
 .skill-card {
-    background-color: #f7fafc;
-    border: 2px solid #4299e1;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd; /* Lighter border for minimalism */
+    padding: 10px; /* Reduced padding */
+    border-radius: 8px;
     text-align: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    height: 150px; /* Uniform height for all cards */
-    width: 150px;  /* Uniform width for all cards */
-    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .skill-card img {
-    width: 50px; /* Uniform logo size */
-    height: 50px; /* Uniform logo size */
-    margin-bottom: 10px;
+    width: 50px; /* Reduced image size */
+    margin-bottom: 8px;
 }
 
 .skill-card p {
-    font-size: 1rem;
-    color: #2d3748;
-    font-weight: bold;
+    font-size: 0.9rem; /* Smaller font size for the description */
+    color: #666; /* Lighter text color */
 }
 
-/* Hover effect for skill cards */
+/* Hover effect for compact cards */
 .skill-card:hover {
-    background-color: #e2e8f0;
-    transform: scale(1.05);
-    cursor: pointer;
+    transform: translateY(-5px); /* Slightly lifts the card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+
+
+/* Project Section */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    padding: 15px;
+    width: 250px; /* More compact project cards */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.2s ease;
+}
+
+.card a {
+    color: #4299e1;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow */
 }
 
 /* Footer */
 .footer {
     text-align: center;
     padding: 20px;
-    background: rgba(66, 153, 225, 0.1);
-    color: #2d3748;
+    background: #222;
+    color: white;
 }
 
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 60vh; /* Adjusted to keep the section vertically centered */
-    padding: 20px;
+/* Smooth Scrolling Effect */
+html {
+    scroll-behavior: smooth;
 }
 
-.hero h1 {
-    font-size: clamp(2rem, 5vw, 3rem); /* Ensures responsiveness */
+/* Minimalistic Buttons and Hover Effects */
+button, a {
+    transition: all 0.3s ease;
+}
+
+button:hover, a:hover {
+    transform: scale(1.05);
     color: #4299e1;
-    text-shadow: 0 0 10px rgba(66, 153, 225, 0.5);
-    font-weight: 300;
-    letter-spacing: 1px;
-    margin-bottom: 10px; /* Space between title and description */
 }
 
-.hero p {
-    font-size: 1.2rem;
-    color: inherit;
-    margin: 5px 0; /* Spacing for better alignment */
+/* Section Fade-In Effects */
+.section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
