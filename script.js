@@ -1,3 +1,4 @@
+// Toggle light and dark modes
 function toggleMode() {
     const isDarkMode = document.body.classList.contains("dark-mode");
 
@@ -12,6 +13,7 @@ function toggleMode() {
     }
 }
 
+// Load the saved theme on page load
 window.onload = () => {
     const savedTheme = localStorage.getItem("theme");
     const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -20,11 +22,12 @@ window.onload = () => {
         savedTheme === "dark" || (!savedTheme && prefersDarkMode) ? "dark-mode" : "light-mode"
     );
 
+    // Initialize particles.js background
     particlesJS("particles-js", {
         particles: {
             number: { value: 50 },
             size: { value: 3 },
-            line_linked: { enable: true, color: "#ffffff" }, /* Subtle white lines */
+            line_linked: { enable: true, color: "#4299e1" },
         },
     });
 };
