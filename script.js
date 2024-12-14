@@ -22,12 +22,12 @@ window.onload = () => {
         savedTheme === "dark" || (!savedTheme && prefersDarkMode) ? "dark-mode" : "light-mode"
     );
 
-    // Initialize particles.js background
+    // Initialize particles.js background (minimal particle style can be used for retro feel)
     particlesJS("particles-js", {
         particles: {
-            number: { value: 50 },
-            size: { value: 3 },
-            line_linked: { enable: true, color: "#4299e1" },
+            number: { value: 30 },
+            size: { value: 2 },
+            line_linked: { enable: true, color: "#00ff00" }, // Green particles
         },
     });
 };
