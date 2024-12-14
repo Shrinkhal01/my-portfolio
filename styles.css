@@ -3,20 +3,22 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Lighter background */
-    color: #333;
+    background-color: #222; /* Dark monotone background */
+    color: #f4f4f4; /* Light text for contrast */
     transition: all 0.3s ease-in-out;
 }
 
+/* Light Mode */
 body.light-mode {
-    background-color: #f7f7f7; /* Slightly lighter */
+    background-color: #e0e0e0; /* Light monotone background */
+    color: #333;
 }
 
+/* Dark Mode */
 body.dark-mode {
-    background-color: #1a202c; /* Darker background for minimalism */
-    color: #e2e8f0; /* Light text for dark mode */
+    background-color: #222; /* Darker monotone */
+    color: #f4f4f4;
 }
-
 
 /* Particles Background */
 #particles-js {
@@ -30,96 +32,81 @@ body.dark-mode {
 
 /* Navbar */
 .navbar {
-    background: linear-gradient(90deg, #1a202c 0%, #2d3748 100%);
-    color: white;
+    background: #333; /* Dark navbar */
+    color: #f4f4f4;
     padding: 15px 20px;
     position: sticky;
     top: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000;
 }
 
 .navbar a {
-    color: white;
+    color: #f4f4f4;
     font-size: 1rem;
     margin: 0 10px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-
+/* Navbar Links Hover Effect */
 .navbar a:hover {
-    color: #4299e1;
+    color: #b4b4b4;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 80px 20px; /* Reduced padding for a tighter look */
-    background: #ffffff; /* Clean background */
-    margin-bottom: 20px; /* Space between sections */
+    padding: 80px 20px;
+    background: #222;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    color: #f4f4f4;
     margin-bottom: 10px;
-    color: #333;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    color: #888;
 }
 
 .hero p {
     font-size: 1rem;
-    color: #666;
+    color: #aaa;
 }
-
 
 /* Skills Section */
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 15px; /* Reduced gap between tiles */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
     margin-top: 30px;
-    padding: 10px; /* Added padding for spacing */
+    padding: 10px;
 }
 
 .skill-card {
-    background: #fff;
-    border: 1px solid #ddd; /* Lighter border for minimalism */
-    padding: 10px; /* Reduced padding */
+    background: #333; /* Dark skill card background */
+    color: #f4f4f4;
+    border: 1px solid #444;
+    padding: 20px;
     border-radius: 8px;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .skill-card img {
-    width: 50px; /* Reduced image size */
-    margin-bottom: 8px;
+    width: 50px;
+    margin-bottom: 10px;
 }
 
 .skill-card p {
-    font-size: 0.9rem; /* Smaller font size for the description */
-    color: #666; /* Lighter text color */
+    font-size: 1rem;
+    color: #ddd;
 }
 
-/* Hover effect for compact cards */
 .skill-card:hover {
-    transform: translateY(-5px); /* Slightly lifts the card */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-
-
-/* Project Section */
+/* Projects Section */
 .card-container {
     display: flex;
     gap: 20px;
@@ -128,45 +115,56 @@ body.dark-mode {
 }
 
 .card {
-    background: #fff;
+    background: #333;
     padding: 15px;
-    width: 250px; /* More compact project cards */
+    width: 250px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
 }
 
+.card h3 {
+    color: #f4f4f4;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
 .card a {
-    color: #4299e1;
+    color: #b4b4b4;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: #f4f4f4;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Lift on hover */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 .footer {
     text-align: center;
     padding: 20px;
-    background: #222;
-    color: white;
+    background: #333;
+    color: #f4f4f4;
 }
 
-/* Smooth Scrolling Effect */
+/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Minimalistic Buttons and Hover Effects */
-button, a {
-    transition: all 0.3s ease;
-}
-
+/* Minimalistic Button Hover Effect */
 button:hover, a:hover {
     transform: scale(1.05);
-    color: #4299e1;
+    color: #b4b4b4;
 }
 
 /* Section Fade-In Effects */
