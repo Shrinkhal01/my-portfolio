@@ -1,26 +1,26 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for terminal */
     margin: 0;
     padding: 0;
-    background-color: #212121; /* Subtle dark background */
-    color: #e0e0e0; /* Light gray text */
+    background-color: #121212; /* Dark background to replicate terminal window */
+    color: #00ff00; /* Classic green text */
     transition: all 0.3s ease-in-out;
 }
 
-/* Light Mode */
+/* Light Mode (optional but will keep it dark by default) */
 body.light-mode {
-    background-color: #f5f5f5; /* Soft light background */
-    color: #333;
+    background-color: #f4f4f4; /* Soft light background */
+    color: #333; /* Dark text */
 }
 
-/* Dark Mode */
+/* Dark Mode (default mode) */
 body.dark-mode {
-    background-color: #212121; /* Dark mode background */
-    color: #e0e0e0;
+    background-color: #121212;
+    color: #00ff00; /* Green text like terminal */
 }
 
-/* Particles Background */
+/* Particles Background (minimal style, can also use ASCII art or pixel-based backgrounds) */
 #particles-js {
     position: fixed;
     top: 0;
@@ -32,12 +32,13 @@ body.dark-mode {
 
 /* Navbar */
 .navbar {
-    background: #333; /* Dark navbar */
-    color: #e0e0e0;
+    background: #1e1e1e; /* Terminal-like dark background */
+    color: #00ff00; /* Green text */
     padding: 20px 40px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 2px solid #333;
 }
 
 .navbar ul {
@@ -47,38 +48,42 @@ body.dark-mode {
 }
 
 .navbar a {
-    color: #e0e0e0;
+    color: #00ff00; /* Green links */
     font-size: 1rem;
     margin: 0 20px;
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid transparent;
 }
 
-/* Navbar Links Hover Effect */
 .navbar a:hover {
-    color: #b4b4b4;
+    color: #ffff00; /* Amber for hover effect */
+    border-bottom: 2px solid #ffff00;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: #333;
+    padding: 80px 20px;
+    background: #1e1e1e;
     margin-bottom: 30px;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    color: #e0e0e0;
-    margin-bottom: 15px;
+    font-size: 3rem;
+    color: #00ff00;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
 .hero p {
     font-size: 1.2rem;
     color: #b4b4b4;
+    margin-top: 10px;
 }
 
-/* Skills Section */
+/* Skills Section (styled like command output) */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -87,13 +92,14 @@ body.dark-mode {
 }
 
 .skill-card {
-    background: #333; /* Dark skill card background */
-    color: #e0e0e0;
-    border-radius: 12px;
+    background: #1e1e1e;
+    color: #00ff00; /* Green text */
+    border-radius: 5px;
     padding: 30px 20px;
     text-align: center;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
 }
 
 .skill-card img {
@@ -103,7 +109,7 @@ body.dark-mode {
 
 .skill-card p {
     font-size: 1rem;
-    color: #ddd;
+    color: #b4b4b4; /* Slightly lighter gray */
 }
 
 .skill-card:hover {
@@ -121,34 +127,35 @@ body.dark-mode {
 }
 
 .card {
-    background: #333;
+    background: #1e1e1e;
     padding: 30px;
     width: 300px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card h3 {
     font-size: 1.6rem;
-    color: #e0e0e0;
+    color: #00ff00; /* Green text for titles */
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
 .card p {
     font-size: 1rem;
-    color: #bbb;
+    color: #b4b4b4;
 }
 
 .card a {
-    color: #b4b4b4;
+    color: #ffff00; /* Amber links */
     font-weight: 600;
     text-decoration: none;
 }
 
 .card a:hover {
-    color: #fff;
+    color: #00ff00;
 }
 
 .card:hover {
@@ -160,8 +167,8 @@ body.dark-mode {
 .footer {
     text-align: center;
     padding: 30px;
-    background: #333;
-    color: #e0e0e0;
+    background: #1e1e1e;
+    color: #00ff00;
 }
 
 /* Smooth Scrolling */
@@ -172,7 +179,7 @@ html {
 /* Button Hover Effect */
 button:hover, a:hover {
     transform: scale(1.05);
-    color: #b4b4b4;
+    color: #ffff00; /* Amber hover effect */
 }
 
 /* Section Fade-In Effects */
@@ -185,4 +192,20 @@ button:hover, a:hover {
 .section.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Terminal Cursor Effect */
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 18px;
+    background-color: #00ff00;
+    margin-left: 5px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent;
+    }
 }
