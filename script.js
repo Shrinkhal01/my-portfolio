@@ -24,7 +24,7 @@ window.onload = () => {
         particles: {
             number: { value: 50 },
             size: { value: 3 },
-            line_linked: { enable: true, color: "#4299e1" },
+            line_linked: { enable: true, color: "#ffffff" }, /* Subtle white lines */
         },
     });
 };
@@ -39,6 +39,7 @@ document.querySelectorAll('.navbar a').forEach(anchor => {
         }
     });
 });
+
 // Fade-in effect on scroll
 window.addEventListener('scroll', function () {
     document.querySelectorAll('.section').forEach(section => {
