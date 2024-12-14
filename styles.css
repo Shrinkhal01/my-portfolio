@@ -3,21 +3,21 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #222; /* Dark monotone background */
-    color: #f4f4f4; /* Light text for contrast */
+    background-color: #212121; /* Subtle dark background */
+    color: #e0e0e0; /* Light gray text */
     transition: all 0.3s ease-in-out;
 }
 
 /* Light Mode */
 body.light-mode {
-    background-color: #e0e0e0; /* Light monotone background */
+    background-color: #f5f5f5; /* Soft light background */
     color: #333;
 }
 
 /* Dark Mode */
 body.dark-mode {
-    background-color: #222; /* Darker monotone */
-    color: #f4f4f4;
+    background-color: #212121; /* Dark mode background */
+    color: #e0e0e0;
 }
 
 /* Particles Background */
@@ -33,19 +33,25 @@ body.dark-mode {
 /* Navbar */
 .navbar {
     background: #333; /* Dark navbar */
-    color: #f4f4f4;
-    padding: 15px 20px;
+    color: #e0e0e0;
+    padding: 20px 40px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
 .navbar a {
-    color: #f4f4f4;
+    color: #e0e0e0;
     font-size: 1rem;
-    margin: 0 10px;
-    text-transform: uppercase;
+    margin: 0 20px;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 /* Navbar Links Hover Effect */
@@ -56,44 +62,43 @@ body.dark-mode {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 80px 20px;
-    background: #222;
-    margin-bottom: 20px;
+    padding: 100px 20px;
+    background: #333;
+    margin-bottom: 30px;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    color: #f4f4f4;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
+    color: #e0e0e0;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1rem;
-    color: #aaa;
+    font-size: 1.2rem;
+    color: #b4b4b4;
 }
 
 /* Skills Section */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 30px;
-    padding: 10px;
+    gap: 20px;
+    padding: 50px 20px;
 }
 
 .skill-card {
     background: #333; /* Dark skill card background */
-    color: #f4f4f4;
-    border: 1px solid #444;
-    padding: 20px;
-    border-radius: 8px;
+    color: #e0e0e0;
+    border-radius: 12px;
+    padding: 30px 20px;
     text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card img {
-    width: 50px;
-    margin-bottom: 10px;
+    width: 60px;
+    margin-bottom: 15px;
 }
 
 .skill-card p {
@@ -102,58 +107,61 @@ body.dark-mode {
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Projects Section */
 .card-container {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 50px 20px;
 }
 
 .card {
     background: #333;
-    padding: 15px;
-    width: 250px;
+    padding: 30px;
+    width: 300px;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card h3 {
-    color: #f4f4f4;
+    font-size: 1.6rem;
+    color: #e0e0e0;
     margin-bottom: 10px;
 }
 
 .card p {
-    font-size: 0.9rem;
-    color: #aaa;
+    font-size: 1rem;
+    color: #bbb;
 }
 
 .card a {
     color: #b4b4b4;
+    font-weight: 600;
     text-decoration: none;
 }
 
 .card a:hover {
-    color: #f4f4f4;
+    color: #fff;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 .footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background: #333;
-    color: #f4f4f4;
+    color: #e0e0e0;
 }
 
 /* Smooth Scrolling */
@@ -161,7 +169,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Minimalistic Button Hover Effect */
+/* Button Hover Effect */
 button:hover, a:hover {
     transform: scale(1.05);
     color: #b4b4b4;
