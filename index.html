@@ -3,58 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrinkhal's Portfolio</title>
+    <meta name="description" content="Portfolio of Shrinkhal - B.Tech Computer Science and Engineering student, specializing in Java, Linux, and machine learning.">
+    <meta name="keywords" content="Shrinkhal, portfolio, Java, Linux, cybersecurity, machine learning, web development">
+    <meta name="author" content="Shrinkhal">
+    <title>Shrinkhal's CLI Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <!-- Particles Background -->
     <div id="particles-js"></div>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li id="theme-toggle"><span>🌙</span></li>
-            </ul>
-        </nav>
+
+    <!-- Mode Toggle Button -->
+    <button onclick="toggleMode()" class="mode-toggle" aria-label="Toggle Theme">
+        <span>🌙</span>
+    </button>
+
+    <!-- Navbar (styled like commands) -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#hero">home</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <h1>Shrinkhal</h1>
+        <p class="subtitle">Welcome to my digital workspace</p>
+        <p>B.Tech in Computer Science & Engineering | Passionate about Cybersecurity, ML & DevOps</p>
     </header>
-    <main>
-        <section id="home">
-            <h1>Hi, I'm Shrinkhal</h1>
-            <p>Cybersecurity Enthusiast & Traffic Management Researcher</p>
-        </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a final-year Computer Science student with a keen interest in cybersecurity, Linux administration, and traffic management research. My journey in technology has been driven by curiosity and a passion for problem-solving.</p>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="card">Python</div>
-            <div class="card">Linux Administration</div>
-            <div class="card">Cybersecurity</div>
-            <div class="card">Machine Learning</div>
-            <div class="card">Traffic Management</div>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="card">
-                <h3>Traffic Management System</h3>
-                <p>An ML-based project designed to optimize traffic flow and reduce congestion using real-time data analysis.</p>
+
+    <!-- Skills Section (styled like command output) -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <img src="bash-logo.png" alt="Bash">
+                <p>Bash</p>
             </div>
-            <div class="card">
-                <h3>Cybersecurity Research</h3>
-                <p>Focused on secure packet transmission and boot menu security, exploring innovative ways to enhance system safety.</p>
+            <div class="skill-card">
+                <img src="cybersecurity-logo.png" alt="Cybersecurity">
+                <p>Cybersecurity</p>
             </div>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:shrinkhalshrinkhal22@gmail.com">shrinkhalshrinkhal22@gmail.com</a></p>
-            <p>Phone: <a href="tel:+919105899032">+91 9105899032</a></p>
-        </section>
-    </main>
-    <script src="particles.js"></script>
+            <div class="skill-card">
+                <img src="ids-logo.png" alt="IDS">
+                <p>IDS</p>
+            </div>
+            <div class="skill-card">
+                <img src="java-logo.png" alt="Java">
+                <p>Java</p>
+            </div>
+            <div class="skill-card">
+                <img src="linux-logo.png" alt="Linux">
+                <p>Linux</p>
+            </div>
+            <div class="skill-card">
+                <img src="network-security-logo.png" alt="Network Security">
+                <p>Network Security</p>
+            </div>
+            <div class="skill-card">
+                <img src="python-logo.png" alt="Python">
+                <p>Python</p>
+            </div>
+            <div class="skill-card">
+                <img src="sql-logo.png" alt="SQL">
+                <p>SQL</p>
+            </div>
+            <div class="skill-card">
+                <img src="tensorflow-logo.png" alt="TensorFlow">
+                <p>TensorFlow</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (styled like command output) -->
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Real-time Object Detection</h3>
+                <p>Python system utilizing TensorFlow and OpenCV for real-time image recognition.</p>
+                <a href="https://github.com/Shrinkhal01/-Real-time-Object-Detection-using-TensorFlow-and-OpenCV" target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:shrinkhalshrinkhal22@gmail.com">shrinkhalshrinkhal22@gmail.com</a></p>
+        <p>
+            <a href="https://twitter.com/_Shrinkhal" target="_blank">Twitter</a> |
+            <a href="https://linkedin.com/in/shrinkhal-02761a2b0/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/shrinkhal01" target="_blank">GitHub</a>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Shrinkhal. All Rights Reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
