@@ -10,10 +10,17 @@ body {
 }
 
 /* Background blur effect */
-body.background-blur {
-    filter: blur(5px);
+body.background-blur::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
     pointer-events: none; /* Prevent interaction with blurred content */
-    transition: filter 0.3s ease, pointer-events 0.3s ease;
 }
 
 /* Navbar */
@@ -166,25 +173,78 @@ body.background-blur {
 .skills-list {
     list-style: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
     justify-content: center;
-}
-
-.skills-list li {
+  }
+  
+  .skills-list li {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 5px;
     background-color: #21262d;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
+  }
+  
+  .skills-list img {
+    width: 50px;  /* Adjusted size */
+    height: 50px; /* Adjusted size */
+    margin-bottom: 10px; /* Space between image and text */
+  }
+  
+  .skills-list span {
+    text-align: center;
+    font-size: 14px;
+    color: #c9d1d9;
+  }/* ...existing code... */
+
+/* Projects List Styles */
+.projects-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.skills-list img {
-    width: 16px;  /* Further reduced size */
-    height: 16px; /* Further reduced size */
+.projects-list li {
+  background-color: #21262d;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
+
+.projects-list li:hover {
+  background-color: #30363d;
+}
+
+.projects-list a {
+  text-decoration: none;
+  color: #58a6ff;
+  font-size: 16px;
+  display: block;
+}
+
+/* Zoom Effect */
+.terminal.zoomed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;  /* Adjusted size */
+  height: 60%; /* Adjusted size */
+  z-index: 1000;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: auto;
+}
+
+/* ...existing code... */
 
 /* Zoom Effect */
 .terminal.zoomed {
@@ -192,8 +252,8 @@ body.background-blur {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
+    width: 60%;  /* Adjusted size */
+    height: 60%; /* Adjusted size */
     z-index: 1000;
     background-color: #0d1117;
     border: 1px solid #30363d;
@@ -201,8 +261,7 @@ body.background-blur {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: auto;
-    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
-}
+  }
 
 .terminal.zoomed .terminal-body {
     padding: 40px;
