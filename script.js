@@ -1,66 +1,26 @@
-// Toggle light and dark modes
-function toggleMode() {
-    const isDarkMode = document.body.classList.contains("dark-mode");
+// Theme toggle functionality
+const themeToggle = document.getElementById("theme-toggle");
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+    localStorage.setItem("theme", document.body.classList.contains("light-mode") ? "light" : "dark");
+});
 
-    if (isDarkMode) {
-        document.body.classList.replace("dark-mode", "light-mode");
-        document.querySelector(".mode-toggle span").textContent = "🌙";
-        localStorage.setItem("theme", "light");
-    } else {
-        document.body.classList.replace("light-mode", "dark-mode");
-        document.querySelector(".mode-toggle span").textContent = "🌞";
-        localStorage.setItem("theme", "dark");
-    }
+// Preserve theme on reload
+if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-mode");
 }
 
-// Load the saved theme on page load
-window.onload = () => {
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    document.body.classList.add(
-        savedTheme === "dark" || (!savedTheme && prefersDarkMode) ? "dark-mode" : "light-mode"
-    );
-
-    // Initialize particles.js background (minimal particle style can be used for retro feel)
-    particlesJS("particles-js", {
-        particles: {
-            number: { value: 30 },
-            size: { value: 2 },
-            line_linked: { enable: true, color: "#00ff00" }, // Green particles
-        },
-    });
-};
-
-// Smooth scrolling for navbar links
-document.querySelectorAll('.navbar a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+// Smooth scrolling for navigation
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener("click", (e) => {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-        }
+        document.querySelector(e.target.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
     });
 });
 
-// Fade-in effect on scroll
-window.addEventListener('scroll', function () {
-    document.querySelectorAll('.section').forEach(section => {
-        const sectionPos = section.getBoundingClientRect().top;
-        const viewportHeight = window.innerHeight;
-        if (sectionPos < viewportHeight - 100) {
-            section.classList.add('visible');
-        }
-    });
-});
-
-// Initial fade-in load for visible sections
-window.addEventListener('load', () => {
-    document.querySelectorAll('.section').forEach(section => {
-        const sectionPos = section.getBoundingClientRect().top;
-        const viewportHeight = window.innerHeight;
-        if (sectionPos < viewportHeight - 100) {
-            section.classList.add('visible');
-        }
-    });
+// Initialize particles.js
+particlesJS.load('particles-js', 'particles.json', function() {
+    console.log('Particles.js loaded.');
 });
