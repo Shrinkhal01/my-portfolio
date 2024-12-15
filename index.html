@@ -1,112 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Shrinkhal - B.Tech Computer Science and Engineering student, specializing in Java, Linux, and machine learning.">
-    <meta name="keywords" content="Shrinkhal, portfolio, Java, Linux, cybersecurity, machine learning, web development">
-    <meta name="author" content="Shrinkhal">
-    <title>Shrinkhal's CLI Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Terminal Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Particles Background -->
-    <div id="particles-js"></div>
-
-    <!-- Mode Toggle Button -->
-    <button onclick="toggleMode()" class="mode-toggle" aria-label="Toggle Theme">
-        <span>🌙</span>
-    </button>
-
-    <!-- Navbar (styled like commands) -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#hero">home</a></li>
-            <li><a href="#skills">skills</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
+  <!-- Terminal Header for Portfolio Title -->
+  <div class="terminal" id="portfolio-title">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+    </div>
+    <div class="terminal-body">
+      <h1 id="title">Shrinkhal's Portfolio</h1>
+      <p id="typing-effect">This is my portfolio!</p>
+    </div>
+  </div>
+  
+  <!-- Navbar -->
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="#about-terminal">About</a></li>
+        <li><a href="#skills-terminal">Skills</a></li>
+        <li><a href="#projects-terminal">Projects</a></li>
+        <li><a href="#contact-terminal">Contact</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <header id="hero" class="hero">
-        <h1>Shrinkhal</h1>
-        <p class="subtitle">Welcome to my digital workspace</p>
-        <p>B.Tech in Computer Science & Engineering | Passionate about Cybersecurity, ML & DevOps</p>
-    </header>
+  <main>
+    <!-- About Terminal -->
+    <div class="terminal" id="about-terminal">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green zoom-btn" data-target="#about-terminal"></span>
+      </div>
+      <div class="terminal-body">
+        <h2>About Me</h2>
+        <p>Hi, I'm Shrinkhal, a passionate developer with expertise in Java, Python, Linux, and cybersecurity.</p>
+      </div>
+    </div>
 
-    <!-- Skills Section (styled like command output) -->
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-card">
-                <img src="bash-logo.png" alt="Bash">
-                <p>Bash</p>
-            </div>
-            <div class="skill-card">
-                <img src="cybersecurity-logo.png" alt="Cybersecurity">
-                <p>Cybersecurity</p>
-            </div>
-            <div class="skill-card">
-                <img src="ids-logo.png" alt="IDS">
-                <p>IDS</p>
-            </div>
-            <div class="skill-card">
-                <img src="java-logo.png" alt="Java">
-                <p>Java</p>
-            </div>
-            <div class="skill-card">
-                <img src="linux-logo.png" alt="Linux">
-                <p>Linux</p>
-            </div>
-            <div class="skill-card">
-                <img src="network-security-logo.png" alt="Network Security">
-                <p>Network Security</p>
-            </div>
-            <div class="skill-card">
-                <img src="python-logo.png" alt="Python">
-                <p>Python</p>
-            </div>
-            <div class="skill-card">
-                <img src="sql-logo.png" alt="SQL">
-                <p>SQL</p>
-            </div>
-            <div class="skill-card">
-                <img src="tensorflow-logo.png" alt="TensorFlow">
-                <p>TensorFlow</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section (styled like command output) -->
-    <section id="projects" class="section">
+    <!-- Projects Terminal -->
+    <div class="terminal" id="projects-terminal">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green zoom-btn" data-target="#projects-terminal"></span>
+      </div>
+      <div class="terminal-body">
         <h2>Projects</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Real-time Object Detection</h3>
-                <p>Python system utilizing TensorFlow and OpenCV for real-time image recognition.</p>
-                <a href="https://github.com/Shrinkhal01/-Real-time-Object-Detection-using-TensorFlow-and-OpenCV" target="_blank">View Project</a>
-            </div>
-        </div>
-    </section>
+        <ul>
+          <li>Traffic Management using ML</li>
+          <li>Packet Transmission Security</li>
+          <li>Linux Bootloader Research</li>
+        </ul>
+      </div>
+    </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
+    <!-- Skills Terminal -->
+    <div class="terminal" id="skills-terminal">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green zoom-btn" data-target="#skills-terminal"></span>
+      </div>
+      <div class="terminal-body">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li><img src="bash-logo.png" alt="Bash">Bash</li>
+          <li><img src="cybersecurity-logo.png" alt="Cybersecurity">Cybersecurity</li>
+          <li><img src="ids-logo.png" alt="IDS">IDS</li>
+          <li><img src="java-logo.png" alt="Java">Java</li>
+          <li><img src="linux-logo.png" alt="Linux">Linux</li>
+          <li><img src="network-security-logo.png" alt="Network Security">Network Security</li>
+          <li><img src="python-logo.png" alt="Python">Python</li>
+          <li><img src="sql-logo.png" alt="SQL">SQL</li>
+          <li><img src="tensorflow-logo.png" alt="TensorFlow">TensorFlow</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Contact Terminal -->
+    <div class="terminal" id="contact-terminal">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green zoom-btn" data-target="#contact-terminal"></span>
+      </div>
+      <div class="terminal-body">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:shrinkhalshrinkhal22@gmail.com">shrinkhalshrinkhal22@gmail.com</a></p>
-        <p>
-            <a href="https://twitter.com/_Shrinkhal" target="_blank">Twitter</a> |
-            <a href="https://linkedin.com/in/shrinkhal-02761a2b0/" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/shrinkhal01" target="_blank">GitHub</a>
-        </p>
-    </section>
+        <p>Email: shrinkhalshrinkhal22@gmail.com</p>
+        <p>Phone: +91 9105899032</p>
+      </div>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2024 Shrinkhal. All Rights Reserved.</p>
-    </footer>
+  </main>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

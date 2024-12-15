@@ -1,211 +1,235 @@
-/* General Styles */
+/* Global Styles */
 body {
-    font-family: 'Courier New', Courier, monospace; /* Monospaced font for terminal */
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0d1117;
+    color: #c9d1d9;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Dark background to replicate terminal window */
-    color: #00ff00; /* Classic green text */
-    transition: all 0.3s ease-in-out;
+    overflow-x: hidden;
+    transition: filter 0.3s ease;
 }
 
-/* Light Mode (optional but will keep it dark by default) */
-body.light-mode {
-    background-color: #f4f4f4; /* Soft light background */
-    color: #333; /* Dark text */
-}
-
-/* Dark Mode (default mode) */
-body.dark-mode {
-    background-color: #121212;
-    color: #00ff00; /* Green text like terminal */
-}
-
-/* Particles Background (minimal style, can also use ASCII art or pixel-based backgrounds) */
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+/* Background blur effect */
+body.background-blur {
+    filter: blur(5px);
+    pointer-events: none; /* Prevent interaction with blurred content */
+    transition: filter 0.3s ease, pointer-events 0.3s ease;
 }
 
 /* Navbar */
 .navbar {
-    background: #1e1e1e; /* Terminal-like dark background */
-    color: #00ff00; /* Green text */
-    padding: 20px 40px;
+    background-color: #161b22;
+    padding: 10px;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid #333;
+    z-index: 100;
 }
 
 .navbar ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
+    gap: 20px;
     justify-content: center;
 }
 
 .navbar a {
-    color: #00ff00; /* Green links */
-    font-size: 1rem;
-    margin: 0 20px;
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-bottom: 2px solid transparent;
+    color: #c9d1d9;
+    transition: color 0.3s;
 }
 
 .navbar a:hover {
-    color: #ffff00; /* Amber for hover effect */
-    border-bottom: 2px solid #ffff00;
+    color: #58a6ff;
 }
 
-/* Hero Section */
-.hero {
+/* Portfolio Title Terminal */
+#portfolio-title {
+    margin: 20px auto;
+    max-width: 80%;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.5s ease, z-index 0.5s ease;
+}
+
+#portfolio-title .terminal-header {
+    background-color: #0d1117;
+    display: flex;
+    gap: 8px;
+    padding: 5px 10px;
+}
+
+#portfolio-title .terminal-header .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#portfolio-title .terminal-header .green {
+    cursor: default;
+}
+
+#portfolio-title .terminal-body {
+    padding: 20px;
     text-align: center;
-    padding: 80px 20px;
-    background: #1e1e1e;
-    margin-bottom: 30px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    color: #00ff00;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+#portfolio-title h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    color: #58a6ff;
+    margin: 0;
 }
 
-.hero p {
+#portfolio-title #typing-effect {
+    color: #c9d1d9;
     font-size: 1.2rem;
-    color: #b4b4b4;
     margin-top: 10px;
 }
 
-/* Skills Section (styled like command output) */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 20px; /* Space between cards */
-    margin-top: 30px;
-    padding: 10px;
+/* Typing Effect Animation */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
-.skill-card {
-    background: rgba(34, 34, 34, 0.7); /* Dark background with transparency */
-    border: 1px solid rgba(68, 68, 68, 0.5); /* Slightly translucent border */
-    padding: 20px; /* Padding inside the card */
-    border-radius: 8px; /* Rounded corners */
-    text-align: center; /* Center the content */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition on hover */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
-}
-
-.skill-card img {
-    width: 50px; /* Set image width */
-    margin-bottom: 10px; /* Add some space below the image */
-}
-
-.skill-card p {
-    font-size: 1rem;
-    color: #b4b4b4; /* Slightly lighter gray */
-}
-
-.skill-card:hover {
-    transform: translateY(-5px); /* Slightly lifts the card */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-}
-
-/* Projects Section */
-.card-container {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 50px 20px;
-}
-
-.card {
-    background: #1e1e1e;
-    padding: 30px;
-    width: 300px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card h3 {
-    font-size: 1.6rem;
-    color: #00ff00; /* Green text for titles */
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-}
-
-.card p {
-    font-size: 1rem;
-    color: #b4b4b4;
-}
-
-.card a {
-    color: #ffff00; /* Amber links */
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.card a:hover {
-    color: #00ff00;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 30px;
-    background: #1e1e1e;
-    color: #00ff00;
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Button Hover Effect */
-button:hover, a:hover {
-    transform: scale(1.05);
-    color: #ffff00; /* Amber hover effect */
-}
-
-/* Section Fade-In Effects */
-.section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Terminal Cursor Effect */
-.cursor {
+#typing-effect {
     display: inline-block;
-    width: 8px;
-    height: 18px;
-    background-color: #00ff00;
-    margin-left: 5px;
-    animation: blink 1s step-end infinite;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40) 1s forwards, blink 0.75s step-end infinite;
 }
 
 @keyframes blink {
     50% {
-        background-color: transparent;
+        border-color: transparent;
     }
+}
+
+/* Terminal Styles */
+.terminal {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 80%;
+    overflow: hidden;
+    transition: transform 0.5s ease, z-index 0.5s ease;
+    z-index: 1;
+}
+
+.terminal-header {
+    background-color: #0d1117;
+    display: flex;
+    gap: 8px;
+    padding: 5px 10px;
+}
+
+.terminal-header .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; cursor: pointer; }
+
+/* Terminal Body */
+.terminal-body {
+    padding: 20px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.skills-grid img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+/* Skills List Styles */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #21262d;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.skills-list img {
+    width: 16px;  /* Further reduced size */
+    height: 16px; /* Further reduced size */
+}
+
+/* Zoom Effect */
+.terminal.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    z-index: 1000;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+}
+
+.terminal.zoomed .terminal-body {
+    padding: 40px;
+}
+
+/* Maximized terminal styles */
+.terminal.maximized {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    background-color: #0d1117;
+    border: none;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    transform: none; /* Remove the transform that was used for zoom */
+    overflow: auto;
+}
+
+/* Zoom Button Hover */
+.zoom-btn:hover {
+    filter: brightness(1.2);
+}
+
+/* Body overflow when zoomed */
+body.zoom-active {
+    overflow: hidden;
 }

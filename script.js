@@ -1,66 +1,34 @@
-// Toggle light and dark modes
-function toggleMode() {
-    const isDarkMode = document.body.classList.contains("dark-mode");
-
-    if (isDarkMode) {
-        document.body.classList.replace("dark-mode", "light-mode");
-        document.querySelector(".mode-toggle span").textContent = "🌙";
-        localStorage.setItem("theme", "light");
-    } else {
-        document.body.classList.replace("light-mode", "dark-mode");
-        document.querySelector(".mode-toggle span").textContent = "🌞";
-        localStorage.setItem("theme", "dark");
-    }
-}
-
-// Load the saved theme on page load
-window.onload = () => {
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    document.body.classList.add(
-        savedTheme === "dark" || (!savedTheme && prefersDarkMode) ? "dark-mode" : "light-mode"
-    );
-
-    // Initialize particles.js background (minimal particle style can be used for retro feel)
-    particlesJS("particles-js", {
-        particles: {
-            number: { value: 30 },
-            size: { value: 2 },
-            line_linked: { enable: true, color: "#00ff00" }, // Green particles
-        },
-    });
-};
-
-// Smooth scrolling for navbar links
-document.querySelectorAll('.navbar a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
+document.addEventListener("DOMContentLoaded", () => {
+    const zoomButtons = document.querySelectorAll(".zoom-btn");
+    const terminals = document.querySelectorAll(".terminal");
+    const body = document.body;
+  
+    zoomButtons.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation(); // Prevent the click from propagating to the document
+        const target = document.querySelector(btn.dataset.target);
+  
+        // If terminal is zoomed, toggle zoomed state
+        if (target.classList.contains("zoomed")) {
+          target.classList.remove("zoomed");
+          body.classList.remove("zoom-active");
+          body.classList.remove("background-blur");
+        } else {
+          // Zoom out all terminals first
+          terminals.forEach((terminal) => terminal.classList.remove("zoomed"));
+          target.classList.add("zoomed");
+          body.classList.add("zoom-active");
+          body.classList.add("background-blur");
         }
+      });
     });
-});
-
-// Fade-in effect on scroll
-window.addEventListener('scroll', function () {
-    document.querySelectorAll('.section').forEach(section => {
-        const sectionPos = section.getBoundingClientRect().top;
-        const viewportHeight = window.innerHeight;
-        if (sectionPos < viewportHeight - 100) {
-            section.classList.add('visible');
-        }
+  
+    // Close zoom when clicking outside the terminal
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".terminal.zoomed") && !e.target.classList.contains("zoom-btn")) {
+        terminals.forEach((terminal) => terminal.classList.remove("zoomed"));
+        body.classList.remove("zoom-active");
+        body.classList.remove("background-blur");
+      }
     });
-});
-
-// Initial fade-in load for visible sections
-window.addEventListener('load', () => {
-    document.querySelectorAll('.section').forEach(section => {
-        const sectionPos = section.getBoundingClientRect().top;
-        const viewportHeight = window.innerHeight;
-        if (sectionPos < viewportHeight - 100) {
-            section.classList.add('visible');
-        }
-    });
-});
+  });
