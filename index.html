@@ -1,51 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Terminal Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrinkhal's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Terminal Header for Portfolio Title -->
-  <div class="terminal" id="portfolio-title">
-    <div class="terminal-header">
-      <span class="dot red"></span>
-      <span class="dot yellow"></span>
-      <span class="dot green"></span>
-    </div>
-    <div class="terminal-body">
-      <h1 id="title">Shrinkhal's Portfolio</h1>
-      <p id="typing-effect">This is my portfolio!</p>
-    </div>
-  </div>
-  
-  <!-- Navbar -->
-  <header class="navbar">
-    <nav>
-      <ul>
-        <li><a href="#about-terminal">About</a></li>
-        <li><a href="#skills-terminal">Skills</a></li>
-        <li><a href="#projects-terminal">Projects</a></li>
-        <li><a href="#contact-terminal">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <main>
-    <!-- About Terminal -->
-    <div class="terminal" id="about-terminal">
-      <div class="terminal-header">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green zoom-btn" data-target="#about-terminal"></span>
-      </div>
-      <div class="terminal-body">
-        <h2>About Me</h2>
-        <p>Hi, I'm Shrinkhal, a passionate developer with expertise in Java, Python, Linux, and cybersecurity.</p>
-      </div>
-    </div>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Shrinkhal</h1>
+            <p>Cybersecurity Enthusiast | Linux Enthusiast</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
 
+<<<<<<< HEAD
     <!-- Projects Terminal -->
     <div class="terminal" id="projects-terminal">
       <div class="terminal-header">
@@ -106,9 +88,71 @@
         <p>Phone: +91 9105899032</p>
       </div>
     </div>
+=======
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm Shrinkhal, a passionate and results-oriented cybersecurity Enthusiast with a strong foundation in Linux system administration, network security. I hold Google Cybersecurity and IBM Linux Administration certifications and am eager to contribute to a challenging and dynamic organization.</p>
 
-  </main>
+            <p>Driven by a desire to identify and mitigate security risks, I enjoy diving into system administration, research, and currently working on a project related to traffic management and secure packet transmission. I'm a firm believer in continuous learning and staying up-to-date with the latest security trends and technologies.</p>
 
-  <script src="script.js"></script>
+            <p>Key achievements:</p>
+            <ul>
+               <li>Successfully completed the Google Cybersecurity Professional Certification and the IBM Linux System Administrator Professional Certificate.</li>
+            </ul>
+        </div>
+    </section>
+>>>>>>> e5d422d (Updated the portfolio moving towards a simpler one)
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project">
+                    <h3>Traffic Management using ML</h3>
+                    <p>Developed a machine learning-based system for optimizing traffic flow and reducing congestion.</p>
+                    <a href="https://github.com/Shrinkhal01/SAIL-S-TWIST" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Packet Transmission Security</h3>
+                    <p>Implemented security measures to protect packet transmission against various attacks.</p>
+                    <a href="https://github.com/Shrinkhal01/packet-transmission-NS" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li><img src="bash-logo.png" alt="Bash"><span>Bash Scripting</span></li>
+                <li><img src="cybersecurity-logo.png" alt="Cybersecurity"><span>Cybersecurity Analysis</span></li>
+                <li><img src="ids-logo.png" alt="IDS"><span>Intrusion Detection/Prevention</span></li>
+                <li><img src="java-logo.png" alt="Java"><span>Java Programming</span></li>
+                <li><img src="linux-logo.png" alt="Linux"><span>Linux System Administration</span></li>
+                <li><img src="network-security-logo.png" alt="Network Security"><span>Network Security</span></li>
+                <li><img src="python-logo.png" alt="Python"><span>Python Programming</span></li>
+                <li><img src="sql-logo.png" alt="SQL"><span>SQL Databases</span></li>
+                <li><img src="tensorflow-logo.png" alt="TensorFlow"><span>TensorFlow/Machine Learning</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: shrinkhalshrinkhal22@gmail.com</p>
+            <p>Phone: +91 9105899032</p>
+            <p><a href="https://www.linkedin.com/in/shrinkhal-pandey-9b7a8b225/" target="_blank">LinkedIn</a></p>
+            <p><a href="https://github.com/Shrinkhal01" target="_blank">GitHub</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Shrinkhal Pandey</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
