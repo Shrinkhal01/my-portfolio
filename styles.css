@@ -252,8 +252,13 @@ body.background-blur::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+<<<<<<< HEAD
     width: 60%;  /* Adjusted size */
     height: 60%; /* Adjusted size */
+=======
+    width: 90%;
+    height: 90%;
+>>>>>>> 91ec452 (Updated the code to make the terminal be zoomed when the maximize button clicked)
     z-index: 1000;
     background-color: #0d1117;
     border: 1px solid #30363d;
@@ -261,7 +266,11 @@ body.background-blur::before {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     overflow: auto;
+<<<<<<< HEAD
   }
+=======
+}
+>>>>>>> 91ec452 (Updated the code to make the terminal be zoomed when the maximize button clicked)
 
 .terminal.zoomed .terminal-body {
     padding: 40px;
