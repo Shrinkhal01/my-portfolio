@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const zoomButtons = document.querySelectorAll('.zoom-btn');
+    zoomButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const target = document.querySelector(this.dataset.target);
+            target.classList.toggle('zoomed');
+        });
+    });
+});
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('nav a');

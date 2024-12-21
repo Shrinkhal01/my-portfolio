@@ -1,6 +1,15 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
+  var zoomButtons = document.querySelectorAll('.zoom-btn');
+  zoomButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var target = document.querySelector(this.dataset.target);
+      target.classList.toggle('zoomed');
+    });
+  });
+});
+document.addEventListener('DOMContentLoaded', function () {
   // Smooth scrolling for navigation links
   var navLinks = document.querySelectorAll('nav a');
   navLinks.forEach(function (link) {
