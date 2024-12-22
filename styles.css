@@ -55,6 +55,11 @@ nav a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    transition: transform 0.3s ease; /* Add transition for zoom effect */
+}
+
+.container:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
 }
 
 .skills-list {
