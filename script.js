@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 70, // Adjust for header height
+                    top: targetElement.offsetTop - 70, 
                     behavior: 'smooth'
                 });
             }
