@@ -1,7 +1,7 @@
 body {
     background-color: #121212;
-    color: #b5b5b5; /* Subdued greenish-gray color for text */
-    font-family: 'Courier New', Courier, monospace; /* Monospace font for terminal look */
+    color: #b5b5b5; 
+    font-family: 'Courier New', Courier, monospace; 
 }
 
 header {
@@ -81,16 +81,13 @@ nav a {
     height: 40px;
     margin-right: 1rem;
 }
-
 .projects-list {
     list-style: none;
     padding: 0;
 }
-
 .projects-list li {
     margin-bottom: 1rem;
 }
-
 .projects-list a {
     color: #4caf50; /* Subdued green color for links */
     text-decoration: none;
