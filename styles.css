@@ -1,15 +1,10 @@
 /* General Styles */
 body {
     background-color: #121212;
-<<<<<<< HEAD
-    color: #b5b5b5; 
-    font-family: 'Courier New', Courier, monospace; 
-=======
     color: #b5b5b5; /* Subdued greenish-gray color for text */
     font-family: 'Poppins', sans-serif;
     margin: 0;
     line-height: 1.6;
->>>>>>> 5eeb0fb (Made changes in the ui)
 }
 
 h1, h2 {
@@ -181,46 +176,21 @@ header .logo {
     height: 40px;
     margin-right: 1rem;
 }
-<<<<<<< HEAD
-=======
 
 /* Projects Section */
->>>>>>> 5eeb0fb (Made changes in the ui)
 .projects-list {
     list-style: none;
     padding: 0;
 }
+
 .projects-list li {
-<<<<<<< HEAD
-    margin-bottom: 1rem;
-}
-.projects-list a {
-    color: #4caf50; /* Subdued green color for links */
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.projects-list a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-=======
     margin-bottom: 2rem;
->>>>>>> 5eeb0fb (Made changes in the ui)
     background-color: #1f1f1f;
     padding: 1rem;
     border-radius: 8px;
     transition: transform 0.3s;
 }
 
-<<<<<<< HEAD
-footer p {
-    margin: 0;
-}
-=======
 .projects-list li:hover {
     transform: scale(1.02);
 }
@@ -281,4 +251,3 @@ footer p {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
->>>>>>> 5eeb0fb (Made changes in the ui)

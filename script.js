@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-<<<<<<< HEAD
-=======
 
     // Toggle Navigation Menu for Mobile
     const navToggle = document.querySelector('.nav-toggle');
@@ -101,5 +99,4 @@ document.addEventListener('DOMContentLoaded', () => {
     setupThreatSimulation();
     setupHackingGame();
     setupAuditReport();
->>>>>>> 5eeb0fb (Made changes in the ui)
 });
