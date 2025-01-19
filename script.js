@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinksContainer.classList.toggle('active');
         });
     }
-});
 
 // Hacking Game: Caesar Cipher Challenge
 function startCaesarCipherChallenge() {
@@ -99,4 +98,5 @@ document.addEventListener('DOMContentLoaded', () => {
     setupThreatSimulation();
     setupHackingGame();
     setupAuditReport();
+}); 
 });
