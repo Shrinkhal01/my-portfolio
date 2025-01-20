@@ -10,9 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70, // Offset for sticky header
-                    behavior: 'smooth',
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
                 });
             }
         });
@@ -27,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinksContainer.classList.toggle('active');
         });
     }
+});
 
 // Hacking Game: Caesar Cipher Challenge
 function startCaesarCipherChallenge() {
@@ -40,8 +40,9 @@ function startCaesarCipherChallenge() {
 // Caesar Cipher Function
 function caesarCipher(str, shift) {
     return str.replace(/[a-zA-Z]/g, (char) => {
-        const start = char <= 'Z' ? 65 : 97;
-        return String.fromCharCode(((char.charCodeAt(0) - start + shift) % 26) + start);
+        const charCode = char.charCodeAt(0);
+        const base = charCode >= 65 && charCode <= 90 ? 65 : 97;
+        return String.fromCharCode(((charCode - base + shift) % 26) + base);
     });
 }
 
@@ -51,9 +52,9 @@ function startCommandLinePuzzle() {
     const question = 'Solve the command-line task: What command lists all files in the current directory?';
     const answer = prompt(question);
     if (answer === 'ls') {
-        output.innerHTML = 'Correct! The command is "ls".';
+        output.innerHTML = 'Correct!';
     } else {
-        output.innerHTML = 'Incorrect. Try again.';
+        output.innerHTML = 'Try again!';
     }
 }
 
@@ -61,8 +62,8 @@ function startCommandLinePuzzle() {
 window.addEventListener('resize', () => {
     const videoElement = document.querySelector('.my-video');
     if (videoElement) {
-        const parentWidth = videoElement.parentElement.offsetWidth;
-        videoElement.style.height = `${parentWidth * 0.5625}px`; // Maintain 16:9 aspect ratio
+        videoElement.style.width = '100%';
+        videoElement.style.height = 'auto';
     }
 });
 
@@ -98,5 +99,24 @@ document.addEventListener('DOMContentLoaded', () => {
     setupThreatSimulation();
     setupHackingGame();
     setupAuditReport();
-}); 
+});
+
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Add Dynamic Header Background on Scroll
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
 });

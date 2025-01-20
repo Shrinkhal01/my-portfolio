@@ -5,6 +5,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 h1, h2 {
@@ -38,6 +39,12 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #333;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+header.scrolled {
+    background-color: #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 header .logo {
@@ -116,6 +123,8 @@ header .logo {
     text-align: center;
     padding: 5rem 1rem;
     background: linear-gradient(135deg, #1f1f1f 0%, #121212 100%);
+    color: #ffffff;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .hero-content h1 {
@@ -129,7 +138,7 @@ header .logo {
 }
 
 .cta-button {
-    background-color: #4caf50; /* Subdued green color for button */
+    background-color: #4caf50;
     color: #ffffff;
     padding: 1rem 2rem;
     text-decoration: none;
@@ -138,7 +147,7 @@ header .logo {
 }
 
 .cta-button:hover {
-    background-color: #388e3c; /* Slightly darker green on hover */
+    background-color: #388e3c;
     box-shadow: 0 0 10px #4caf50;
 }
 
@@ -200,38 +209,6 @@ header .logo {
     box-shadow: 0 0 10px #4caf50;
 }
 
-/* Hacking Game Section */
-#hacking-game-content {
-    background-color: #1f1f1f;
-    padding: 20px;
-    border-radius: 8px;
-    color: #b5b5b5;
-}
-
-#hacking-game-content button {
-    background-color: #4caf50;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px 0;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-#hacking-game-content button:hover {
-    background-color: #388e3c;
-    box-shadow: 0 0 10px #4caf50;
-}
-
-#game-output {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #121212;
-    border: 1px solid #4caf50;
-    border-radius: 5px;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -244,16 +221,18 @@ footer p {
     color: #b5b5b5;
 }
 
-/* Video */
-.my-video {
-    position: relative;
-    object-position: center center;
-    object-fit: cover;
-    border-radius: 8px;
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-/* Animations */
+/* Add subtle hover effects for containers */
 .container:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     transition: transform 0.3s ease;
 }
