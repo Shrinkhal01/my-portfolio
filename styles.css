@@ -3,16 +3,19 @@
 
 /* CSS Variables for theme and transitions */
 :root {
-  --primary-color: #4caf50;
-  --accent-color: #66ff66;
-  --bg-color: #121212;
-  --header-bg: #000;
-  --text-color: #e0e0e0;
-  --container-bg: rgba(0, 0, 0, 0.6);
-  --container-border: rgba(255, 255, 255, 0.1);
-  --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  --transition-duration: 0.3s;
-  --easing: ease-in-out;
+  --primary-color: #6200ea;      /* vibrant deep purple */
+  --accent-color: #03dac5;       /* bright teal accent */
+  --bg-color: #121212;           /* near-black dark background */
+  --header-bg: #000000;          /* black header background */
+  --text-color: #ffffff;         /* white text for clarity */
+  --container-bg: rgba(0, 0, 0, 0.65);
+  --container-border: rgba(255, 255, 255, 0.2);
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+  --transition-duration: 0.35s;
+  --easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --spacing-large: 2.5rem;
+  --spacing-medium: 1.5rem;
+  --spacing-small: 0.75rem;
 }
 
 /* Global Reset */
@@ -39,7 +42,8 @@ h1, h2 {
   color: #ffffff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
   letter-spacing: 1px;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-small);
+  font-weight: 700;
 }
 
 /* Links */
@@ -54,22 +58,22 @@ a:hover {
   text-shadow: 0 0 10px var(--primary-color);
 }
 
-/* Glassmorphism Container Panels with Animation */
+/* Enhanced Container Panels for a Splendide effect */
 .container {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 2rem;
+  margin: var(--spacing-large) auto;
+  padding: var(--spacing-large);
   background: var(--container-bg);
   border: 1px solid var(--container-border);
   border-radius: 10px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7); /* deeper shadow for depth */
   backdrop-filter: blur(10px);
   transition: transform var(--transition-duration) var(--easing), box-shadow var(--transition-duration) var(--easing);
   animation: fadeInUp 0.6s var(--easing);
 }
 .container:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 15px var(--primary-color);
+  transform: scale(1.03);
+  box-shadow: 0 0 20px var(--primary-color);
 }
 
 /* Header */
@@ -112,7 +116,7 @@ header.scrolled {
 .nav-links a {
   color: var(--text-color);
   font-weight: 700;
-  transition: color var(--transition-duration) var(--easing), text-shadow var(--transition-duration) var(--easing), transform var(--transition-duration) var(--easing);
+  transition: color var(--transition-duration) var (--easing), text-shadow var(--transition-duration) var (--easing), transform var(--transition-duration) var(--easing);
 }
 .nav-links a:hover {
   color: var(--primary-color);
@@ -158,42 +162,49 @@ header.scrolled {
   }
 }
 
-/* Hero Section */
+/* Hero Section Updated for a more Magnifique experience */
 #hero {
   text-align: center;
-  padding: 6rem 1rem;
-  background: linear-gradient(135deg, var(--header-bg), var(--bg-color));
+  padding: 6rem var(--spacing-medium);
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('pexels-johnpet-2115257.jpg') no-repeat center/cover;
   color: #ffffff;
   animation: fadeIn 1.5s var(--easing);
 }
+
+/* Updated Hero Title to Match the New Palette */
 .hero-content h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  font-size: 4.5rem;
+  margin-bottom: var(--spacing-medium);
+  background: linear-gradient(90deg, #6200ea, #3700b3); /* deep purple gradient */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
 }
 .hero-content p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-medium);
+  line-height: 1.6;
 }
 
-/* Call-to-Action Button */
+/* Refined Call-to-Action Button for a Formidable look */
 .cta-button {
   background-color: transparent;
   color: var(--primary-color);
-  padding: 1rem 2rem;
+  padding: var(--spacing-small) var(--spacing-medium);
   text-decoration: none;
   border: 2px solid var(--primary-color);
   border-radius: 5px;
+  font-weight: 600;
+  text-transform: uppercase;
   transition: background-color var(--transition-duration) var(--easing), color var(--transition-duration) var(--easing), box-shadow var(--transition-duration) var(--easing), transform var(--transition-duration) var(--easing);
 }
+
 .cta-button:hover {
   background-color: var(--primary-color);
   color: var(--bg-color);
-  box-shadow: 0 0 10px var(--primary-color);
-  transform: translateY(-2px);
+  box-shadow: 0 0 20px var(--primary-color); /* enhanced glow */
+  transform: scale(1.05);
 }
 
 /* About Section */
@@ -201,7 +212,7 @@ header.scrolled {
   color: var(--text-color);
   line-height: 1.8;
   text-align: justify;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-medium);
 }
 
 /* Skills Section */
@@ -234,22 +245,29 @@ header.scrolled {
   margin-right: 1rem;
 }
 
-/* Projects Section */
+/* Updated Projects List with Grid Layout for balanced info boxes */
 .projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-medium);
   list-style: none;
   padding: 0;
+  /* Optionally enforce center alignment */
+  justify-items: center;
 }
+
+/* Updated Projects List info boxes styling for a polished, modern look */
 .projects-list li {
-  margin-bottom: 2rem;
-  background-color: var(--header-bg);
-  padding: 1rem;
-  border: 1px solid var(--container-border);
+  background-color: rgba(0, 0, 0, 0.6); /* subtle overlay background */
+  padding: var(--spacing-medium);
   border-radius: 8px;
-  transition: transform var(--transition-duration) var(--easing), box-shadow var(--transition-duration) var(--easing);
+  transition: transform var(--transition-duration) var(--easing), 
+              box-shadow var(--transition-duration) var(--easing);
+  width: 100%; /* ensure full grid cell width */
 }
 .projects-list li:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 10px var(--primary-color);
+  transform: scale(1.03);
+  box-shadow: 0 0 15px var(--primary-color);
 }
 
 /* Footer */
@@ -260,7 +278,7 @@ footer {
 }
 footer p {
   margin: 0;
-  color: var(--text-color);
+  color: var (--text-color);
 }
 
 /* Animations */
@@ -281,5 +299,33 @@ footer p {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* New Shine Animation for Hero Content */
+@keyframes shine {
+  from {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Apply shine effect to hero title, tagline, and button */
+.hero-content h1,
+.hero-content p,
+.cta-button {
+  animation: shine 2.5s ease-in-out infinite alternate;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    padding: var(--spacing-medium);
+  }
+  .projects-list {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
   }
 }
