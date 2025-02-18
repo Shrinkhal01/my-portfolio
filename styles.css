@@ -329,3 +329,49 @@ footer p {
     justify-items: stretch;
   }
 }
+
+/* Enhanced Responsive Adjustments for Mobile Devices */
+@media (max-width: 600px) {
+  /* Reduce overall font size if needed */
+  html {
+    font-size: 14px;
+  }
+  
+  /* Adjust container padding and margin */
+  .container {
+    padding: var(--spacing-medium);
+    margin: var(--spacing-small);
+  }
+  
+  /* Scale down Hero Section elements */
+  #hero {
+    padding: 4rem var(--spacing-small);
+  }
+  
+  .hero-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: var(--spacing-small);
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-small);
+  }
+  
+  .cta-button {
+    font-size: 1rem;
+    padding: var(--spacing-small) var(--spacing-small);
+  }
+  
+  /* Adjust grid layout for Projects List */
+  .projects-list {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
+  
+  /* Adjust navigation menu font size and spacing */
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+}
