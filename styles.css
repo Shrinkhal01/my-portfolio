@@ -169,18 +169,24 @@ header.scrolled {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('pexels-johnpet-2115257.jpg') no-repeat center/cover;
   color: #ffffff;
   animation: fadeIn 1.5s var(--easing);
+  background: linear-gradient(45deg, #6200ea, #3700b3, #6200ea);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite, fadeIn 1.5s var(--easing);
 }
 
-/* Updated Hero Title to Match the New Palette */
+/* Enhanced Hero Title for maximum visibility of "Shrinkhal" */
 .hero-content h1 {
-  font-size: 4.5rem;
+  font-size: 6rem; /* further increased */
   margin-bottom: var(--spacing-medium);
-  background: linear-gradient(90deg, #6200ea, #3700b3); /* deep purple gradient */
+  background: linear-gradient(90deg, #6200ea, #3700b3);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  /* Stronger, contrasting text shadow */
+  text-shadow: 0 0 15px #ffffff, 0 0 25px #ffffff;
+  animation: none; /* remove any interfering animations */
 }
+
 .hero-content p {
   font-size: 1.75rem;
   margin-bottom: var(--spacing-medium);
@@ -205,6 +211,7 @@ header.scrolled {
   color: var(--bg-color);
   box-shadow: 0 0 20px var(--primary-color); /* enhanced glow */
   transform: scale(1.05);
+  animation: pulse 1s ease-in-out infinite;
 }
 
 /* About Section */
@@ -312,11 +319,46 @@ footer p {
   }
 }
 
+/* New keyframes for a shifting gradient background */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* New keyframes for pulsing CTA button */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 /* Apply shine effect to hero title, tagline, and button */
 .hero-content h1,
 .hero-content p,
 .cta-button {
   animation: shine 2.5s ease-in-out infinite alternate;
+}
+
+/* Hidden state for elements to animate on scroll */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Show state to reveal elements */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .hidden,
+  .show {
+    transition: none;
+  }
 }
 
 /* Responsive adjustments for smaller screens */
